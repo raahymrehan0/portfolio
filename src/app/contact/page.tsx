@@ -34,55 +34,42 @@ export default function Contact() {
 
   return (
     <div className="-mt-20 bg-foreground text-white ">
-      <div className="flex min-h-screen w-full items-center justify-center pt-44 align-middle text-[8.6vw] xs:text-[5.6vw]">
-        <div className="p-12 xs:w-1/2 xs:p-0">
-          <div className="flex justify-between uppercase">
-            <p className="m-0">Raahym</p>
-            <p className="m-0">Rehan</p>
-          </div>
-          <div className="flex justify-between uppercase">
-            <p className="m-0">software</p>
-            <p className="m-0">&</p>
-          </div>
-          <div className="flex justify-between uppercase">
-            <p className="m-0">design</p>
-            <p className="m-0">engineer</p>
-          </div>
-          <div className="flex justify-between uppercase">
-            <p className="m-0">Ldn </p>
-            <Link href={'https://www.linkedin.com/in/raahymrehan/'}>
-              <TextDisperse setBackground={setBackground}>
-                <p>→Linkedin</p>
-              </TextDisperse>
-            </Link>
-          </div>
-          <div className="flex justify-between uppercase">
-            <TextDisperse
-              setBackground={setBackground}
-              onClick={() => {
-                toast({
-                  description:
-                    'Email copied to clipboard, alternatively write your enquiry on the form!'
-                });
-                scrollToEmail();
-              }}
-            >
-              <p className="m-0">→Email</p>
-            </TextDisperse>
-
-            <Link href={'https://github.com/raahymrehan0'}>
-              <TextDisperse setBackground={setBackground}>
-                <p>→Github</p>
-              </TextDisperse>
-            </Link>
-          </div>
-          <div
-            ref={background}
-            className={clsx(
-              'pointer-events-none absolute inset-0 h-full w-full bg-foreground text-[5.6vw] opacity-0'
-            )}
-          ></div>
+      <div className="flex min-h-screen w-full items-center justify-between px-12 pt-44 align-middle text-[8.6vw] xs:text-[5.6vw] xs:px-24">
+        <div className="uppercase">
+          <p className="m-0">Raahym</p>
+          <p className="m-0">Rehan</p>
+          <p className="m-0">London</p>
         </div>
+        <div className="flex flex-col items-end gap-4 uppercase">
+          <TextDisperse
+            setBackground={setBackground}
+            onClick={() => {
+              toast({
+                description:
+                  'Email copied to clipboard, alternatively write your enquiry on the form!'
+              });
+              scrollToEmail();
+            }}
+          >
+            <p className="m-0">→Email</p>
+          </TextDisperse>
+          <Link href={'https://www.linkedin.com/in/raahymrehan/'}>
+            <TextDisperse setBackground={setBackground}>
+              <p>→Linkedin</p>
+            </TextDisperse>
+          </Link>
+          <Link href={'https://github.com/raahymrehan0'}>
+            <TextDisperse setBackground={setBackground}>
+              <p>→Github</p>
+            </TextDisperse>
+          </Link>
+        </div>
+        <div
+          ref={background}
+          className={clsx(
+            'pointer-events-none absolute inset-0 h-full w-full bg-foreground text-[5.6vw] opacity-0'
+          )}
+        ></div>
       </div>
       <div className="px-12 sm:px-56" id="email" ref={emailRef}>
         <ContactForm />
