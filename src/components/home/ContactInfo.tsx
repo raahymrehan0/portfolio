@@ -65,7 +65,7 @@ export default function ContactInfo() {
           </motion.div>
         </div>
         <div className="mt-6 flex gap-5 sm:mx-[100px]">
-          <RoundedButton>bettinasosarohl@gmail.com</RoundedButton>
+          <RoundedButton>raahym.rehan@gmail.com</RoundedButton>
         </div>
 
         <div className="mt-20 flex flex-col justify-between p-5 2xs:mt-52 sm:mx-[100px] sm:mt-48 sm:flex-row">
@@ -105,7 +105,7 @@ export default function ContactInfo() {
             </span>
             <Magnetic>
               <Link
-                href="https://github.com/bettinasosa"
+                href="https://github.com/raahymrehan0"
                 className={animatedUnderlineStyle}
               >
                 Github
@@ -113,7 +113,7 @@ export default function ContactInfo() {
             </Magnetic>
             <Magnetic>
               <Link
-                href="https://www.linkedin.com/in/bettina-sosa/"
+                href="https://www.linkedin.com/in/raahymrehan/"
                 className={animatedUnderlineStyle}
               >
                 Linkedin

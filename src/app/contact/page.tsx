@@ -19,7 +19,7 @@ export default function Contact() {
   };
 
   const copyEmail = () => {
-    navigator.clipboard.writeText('bettinasosarohl@gmail.com');
+    navigator.clipboard.writeText('raahym.rehan@gmail.com');
     setEmailCopied(true);
     setTimeout(() => setEmailCopied(false), 2000);
   };
@@ -37,8 +37,8 @@ export default function Contact() {
       <div className="flex min-h-screen w-full items-center justify-center pt-44 align-middle text-[8.6vw] xs:text-[5.6vw]">
         <div className="p-12 xs:w-1/2 xs:p-0">
           <div className="flex justify-between uppercase">
-            <p className="m-0">Bettina</p>
-            <p className="m-0">Sosa</p>
+            <p className="m-0">Raahym</p>
+            <p className="m-0">Rehan</p>
           </div>
           <div className="flex justify-between uppercase">
             <p className="m-0">software</p>
@@ -50,7 +50,7 @@ export default function Contact() {
           </div>
           <div className="flex justify-between uppercase">
             <p className="m-0">Ldn </p>
-            <Link href={'https://www.linkedin.com/in/bettina-sosa/'}>
+            <Link href={'https://www.linkedin.com/in/raahymrehan/'}>
               <TextDisperse setBackground={setBackground}>
                 <p>→Linkedin</p>
               </TextDisperse>
@@ -70,7 +70,7 @@ export default function Contact() {
               <p className="m-0">→Email</p>
             </TextDisperse>
 
-            <Link href={'https://github.com/bettinasosa'}>
+            <Link href={'https://github.com/raahymrehan0'}>
               <TextDisperse setBackground={setBackground}>
                 <p>→Github</p>
               </TextDisperse>
