@@ -10,40 +10,39 @@ import { SpeedInsights } from '@vercel/speed-insights/next';
 
 const inter = Inter({ subsets: ['latin'] });
 
-const siteUrl =
-  process.env.NEXT_PUBLIC_SITE_URL ?? 'https://www.bettinasosa.com';
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://www.raahymrehan.com';
 
 const metaDescription =
-  'Creative Builder · Software Engineer · Design Engineer. Product, code & craft.';
+  'Raahym Rehan · Software Engineer · Building thoughtful products and AI experiences.';
 
-const ogImagePath = '/images/Bettina_s%20portfolio.jpeg';
+const ogImagePath = '/images/profile2.jpg';
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Bettina's portfolio",
-    template: "%s | Bettina's portfolio"
+    default: "Raahym's portfolio",
+    template: "%s | Raahym's portfolio"
   },
   description: metaDescription,
   openGraph: {
     type: 'website',
     locale: 'en_US',
     url: siteUrl,
-    siteName: "Bettina's portfolio",
-    title: "Bettina's portfolio",
+    siteName: "Raahym's portfolio",
+    title: "Raahym's portfolio",
     description: metaDescription,
     images: [
       {
         url: ogImagePath,
         width: 1200,
         height: 630,
-        alt: "Bettina — Creative Builder, Software Engineer, Design Engineer"
+        alt: 'Raahym Rehan — Software Engineer'
       }
     ]
   },
   twitter: {
     card: 'summary_large_image',
-    title: "Bettina's portfolio",
+    title: "Raahym's portfolio",
     description: metaDescription,
     images: [ogImagePath]
   },

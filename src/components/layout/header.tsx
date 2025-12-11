@@ -58,7 +58,7 @@ export default function Header() {
                 height={32}
                 width={32}
                 src="/images/logo.jpg"
-                alt="Bettinas logo"
+                alt="Raahym's logo"
                 priority
               />
             </Magnetic>
@@ -70,7 +70,7 @@ export default function Header() {
                     coded by
                   </div>
                   <div className="ease-custom-cubic px-1 transition-transform duration-500 group-hover:translate-x-[-65px]">
-                    Bettina
+                    Raahym
                   </div>
 
                   <div
