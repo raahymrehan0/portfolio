@@ -63,7 +63,7 @@ export default function About() {
                 <div className="relative">
                   <div className="rounded-full blur-3xl" />
                   <Image
-                    className="relative z-10 mx-auto h-auto w-full max-w-sm rounded-t-full shadow-lg"
+                    className="relative z-10 mx-auto h-auto w-full max-w-sm rounded-t-full shadow-lg object-cover"
                     width={1440}
                     height={1800}
                     src="/images/profile2.jpg"
