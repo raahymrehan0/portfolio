@@ -73,12 +73,12 @@ export default function Header() {
                     Raahym
                   </div>
 
-                  <div
-                    className="ease-custom-cubic
-              translate-x-full transition-transform duration-500 group-hover:translate-x-[-65px]"
-                  >
-                    Sosa
-                  </div>
+                    <div
+                      className="ease-custom-cubic
+                translate-x-full transition-transform duration-500 group-hover:translate-x-[-65px]"
+                    >
+                      Rehan
+                    </div>
                 </div>
               </>
             )}
