@@ -66,9 +66,7 @@ export default function Description() {
           animate={isInView ? 'open' : 'closed'}
           className="m-0 text-lg font-light"
         >
-          My projects have received multiple awards in the past, and I am always
-          looking for new and innovative ways to use my skills to make a
-          positive impact on the world.
+          I have contributed to innovative projects in industry, ranging from multi-agent humanitarian systems with Microsoft and IFRC, to ML-driven IoT solutions and full-stack web platforms. I am always seeking new opportunities to apply my skills and make a meaningful difference through technology.
         </motion.p>
         <div data-scroll-speed={0.1}>
           <Link href={'/about'}>

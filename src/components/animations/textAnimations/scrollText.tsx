@@ -6,7 +6,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 const raahym = 'Raahym ';
 const rehan = 'Rehan';
-const sentence3 = 'Reach Higher';
+const sentence3 = 'UCL';
 
 function getRandomSpeed() {
   const randomDecimal = Math.random();
