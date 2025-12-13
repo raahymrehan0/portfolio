@@ -16,15 +16,17 @@ function getRandomRotation() {
   return Math.random() * 60 - 30; // Random rotation between -30 and 30 degrees
 }
 
-const animateLettersOnScroll = (containerRef: MutableRefObject<any>) => {
+const animateLettersOnScroll = (containerRef: MutableRefObject<any>, upOnly = false) => {
   const lettersContainer = containerRef.current;
   const letterElements = lettersContainer?.querySelectorAll('.letter');
 
   letterElements.forEach((letter: Element, index: number) => {
     gsap.to(letter, {
-      y: (i, el) =>
-        (1 - parseFloat(el.getAttribute('data-speed'))) *
-        ScrollTrigger.maxScroll(window),
+      y: (i, el) => {
+        const base = (1 - parseFloat(el.getAttribute('data-speed')))
+          * ScrollTrigger.maxScroll(window);
+        return upOnly ? -Math.abs(base) : base;
+      },
       ease: 'power2.out',
       duration: 0.8,
       scrollTrigger: {
@@ -39,28 +41,30 @@ const animateLettersOnScroll = (containerRef: MutableRefObject<any>) => {
   });
 };
 
-function LetterDisplay({ word }: { word: string }) {
-  return word.split('').map((letter, index) => (
-    <div
-      key={index}
-      className="letter text-6xl font-semibold xs:text-[90px] xs:leading-none md:text-[120px] lg:text-[150px] xl:text-[210px] "
-      data-speed={getRandomSpeed()}
-    >
-      {letter}
+function LetterDisplay({ word, upOnly = false }: { word: string, upOnly?: boolean }) {
+  const containerRef = useRef(null);
+  useEffect(() => {
+    if (!containerRef.current) return;
+    animateLettersOnScroll({ current: containerRef.current }, upOnly);
+  }, [upOnly]);
+  return (
+    <div ref={containerRef} style={{ display: 'flex' }}>
+      {word.split('').map((letter, index) => (
+        <div
+          key={index}
+          className="letter text-6xl font-semibold xs:text-[90px] xs:leading-none md:text-[120px] lg:text-[150px] xl:text-[210px] "
+          data-speed={getRandomSpeed()}
+        >
+          {letter}
+        </div>
+      ))}
     </div>
-  ));
+  );
 }
 
 export function LetterCollision() {
-  const containerRef = useRef(null);
-
-  useEffect(() => {
-    if (!containerRef.current) return;
-    animateLettersOnScroll(containerRef);
-  }, []);
-
   return (
-    <div ref={containerRef} className="ml-8 scroll-smooth">
+    <div className="ml-8 scroll-smooth">
       <div className="-mt-28 mb-36 flex h-screen flex-col justify-end lg:mb-24">
         <div className="flex flex-wrap p-0">
           <LetterDisplay word={raahym} />
@@ -68,7 +72,7 @@ export function LetterCollision() {
         </div>
       </div>
       <div className="flex flex-wrap">
-        <LetterDisplay word={sentence3} />
+        <LetterDisplay word={sentence3} upOnly />
       </div>
     </div>
   );
