@@ -68,9 +68,28 @@ export default function Home() {
 
   const scrollToHero = () => {
     const heroSection = document.getElementById('hero');
-    if (heroSection) {
-      heroSection.scrollIntoView({ behavior: 'smooth' });
-    }
+    if (!heroSection) return;
+    // Custom smooth scroll to control duration (slower)
+    const start = window.scrollY || window.pageYOffset;
+    const rect = heroSection.getBoundingClientRect();
+    const target = start + rect.top;
+    const duration = 1800; // milliseconds — slower smooth scroll
+    let startTime: number | null = null;
+
+    const easeInOutQuad = (t: number) => (t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t);
+
+    const step = (timestamp: number) => {
+      if (!startTime) startTime = timestamp;
+      const elapsed = timestamp - startTime;
+      const progress = Math.min(elapsed / duration, 1);
+      const eased = easeInOutQuad(progress);
+      window.scrollTo(0, Math.round(start + (target - start) * eased));
+      if (elapsed < duration) {
+        requestAnimationFrame(step);
+      }
+    };
+
+    requestAnimationFrame(step);
   };
 
   return (
