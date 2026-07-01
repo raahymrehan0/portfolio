@@ -6,10 +6,9 @@ export const profile = {
   github: 'https://github.com/raahymrehan0',
   linkedin: 'https://www.linkedin.com/in/raahymrehan/',
   instagram: 'https://instagram.com/raahymrehan',
-  headline:
-    'I build AI systems, data products, and backend tools for real decisions.',
+  headline: 'I build AI systems and data products for real decisions.',
   summary:
-    'I am a third year Computer Science student at UCL. My work spans agent systems, market intelligence, crisis analysis, and IoT data.',
+    'I am a third year Computer Science student at UCL. My work spans agent systems, market intelligence and crisis analysis.',
   focus: [
     'Agentic AI systems',
     'Data engineering',
@@ -42,8 +41,8 @@ export const experience = [
       'Working on quantitative FX risk infrastructure and market data systems used in pricing and exposure workflows.',
     highlights: [
       'Contributing to backend services in Java and Python.',
-      'Working with quantitative models, streaming market data, and internal pricing flows.',
-      'Building with care around visibility, reliability, and risk metrics.'
+      'Working with quantitative models and streaming market data for pricing flows.',
+      'Building with care around visibility and reliability in risk metrics.'
     ],
     tags: ['Java', 'Python', 'Kafka', 'Market data']
   },
@@ -56,9 +55,11 @@ export const experience = [
     summary:
       'Built parts of a humanitarian intelligence platform for source grounded crisis reporting.',
     highlights: [
-      'Worked on ingestion from HDX, GDELT, ReliefWeb, and Copernicus.',
+      'Worked on ingestion across HDX, GDELT and ReliefWeb.',
+      'Used Copernicus data for geospatial crisis context.',
       'Helped shape a LangGraph pipeline for IFRC aligned report generation.',
-      'Integrated Django APIs, React views, Azure PostgreSQL, and Azure OpenAI.'
+      'Integrated Django APIs and React views with Azure PostgreSQL.',
+      'Connected generation flows to Azure OpenAI.'
     ],
     tags: ['LangGraph', 'Django', 'React', 'Azure', 'PostgreSQL'],
     href: 'https://students.cs.ucl.ac.uk/2025/group21/'
@@ -102,9 +103,9 @@ export const featuredProjects = [
     image: '/images/projects/foresight-logo.png',
     status: 'Private repo',
     summary:
-      'A geopolitical market intelligence platform for lithium, oil, and semiconductors.',
+      'A geopolitical market intelligence platform for lithium and semiconductor supply chains.',
     description:
-      'ForeSight monitors live signals, scores market risk, and links events to public companies. It combines Perplexity Sonar Pro, Finnhub data, RSS discovery, maps, timelines, and trading opportunity cards.',
+      'ForeSight monitors live signals and scores market risk. It links geopolitical events to public companies. It uses Perplexity Sonar Pro and Finnhub. It also uses RSS discovery, maps and opportunity cards.',
     contribution:
       'I worked across the product flow from event discovery to risk analysis and dashboard presentation.',
     tags: [
@@ -126,9 +127,9 @@ export const featuredProjects = [
     summary:
       'A crisis intelligence dashboard built with Microsoft and IFRC through UCL IXN.',
     description:
-      'The platform turns crisis data into structured reports for analysts and operations teams. It uses LangGraph, Django, React, Azure PostgreSQL, Azure OpenAI, HDX, GDELT, ReliefWeb, and Copernicus.',
+      'The platform turns crisis data into structured reports for analysts and operations teams. It uses LangGraph, Django and React. It also uses Azure PostgreSQL and Azure OpenAI. Source data comes from HDX, GDELT, ReliefWeb and Copernicus.',
     contribution:
-      'I focused on data ingestion, agent orchestration, and system integration.',
+      'I focused on data ingestion, agent orchestration and system integration.',
     tags: ['LangGraph', 'Django', 'React', 'Azure', 'PostgreSQL'],
     colour: '#7f1d1d'
   },
@@ -140,7 +141,7 @@ export const featuredProjects = [
     summary:
       'A multi-agent disaster response command dashboard for the first hours after a crisis.',
     description:
-      'AIDR combines FastAPI agents, PostgreSQL with PostGIS, WebSockets, OpenAI analysis, Mapbox, damage assessment, resource planning, and mission control.',
+      'AIDR combines FastAPI agents, PostgreSQL with PostGIS and WebSockets. It uses OpenAI analysis, Mapbox and mission control workflows.',
     contribution:
       'I worked on the agent backed response flow and the dashboard model for command decisions.',
     tags: ['FastAPI', 'PostGIS', 'Mapbox', 'WebSockets', 'OpenAI'],
@@ -152,11 +153,11 @@ export const featuredProjects = [
     image: '/images/projects/campnav-screenshot.jpeg',
     status: 'Private repo',
     summary:
-      'A campus navigation assistant that listens, sees, and overlays direction cues.',
+      'A campus navigation assistant that listens and overlays direction cues.',
     description:
-      'CampNav uses LiveKit voice, camera frames, multimodal LLM context, orientation data, QR detection, and AR arrow guidance. HackLondon work fed into the prototype.',
+      'CampNav uses LiveKit voice and camera frames. It adds multimodal LLM context, orientation data and QR detection. HackLondon work fed into the AR guidance prototype.',
     contribution:
-      'I helped connect the voice assistant, camera stream, and navigation overlay into one prototype.',
+      'I helped connect the voice assistant, camera stream and navigation overlay into one prototype.',
     tags: ['LiveKit', 'Next.js', 'OpenAI', 'Computer vision', 'AR'],
     colour: '#4338ca'
   }
@@ -205,7 +206,7 @@ export const notes = [
     title: 'Why ForeSight became a flagship project',
     date: '2026',
     summary:
-      'It connects news discovery, market data, and risk scoring into one clear analyst workflow.',
+      'It connects news discovery, market data and risk scoring into one analyst workflow.',
     tags: ['AI', 'Markets', 'Product']
   },
   {
@@ -219,7 +220,7 @@ export const notes = [
     title: 'CampNav as a prototype',
     date: '2025',
     summary:
-      'Voice, camera frames, and orientation data can make navigation feel more direct. The prototype explored that interaction loop.',
+      'Voice, camera frames and orientation data can make navigation feel direct. The prototype explored that interaction loop.',
     tags: ['Voice', 'Vision', 'AR']
   }
 ];
@@ -232,7 +233,7 @@ export const education = [
     highlights: [
       'First Class Honours.',
       'Undergraduate Teaching Assistant for Engineering Challenges.',
-      'Modules include machine learning, quantum computation, algorithms, concurrency, and software engineering.'
+      'Modules include machine learning, quantum computation and algorithms.'
     ]
   },
   {

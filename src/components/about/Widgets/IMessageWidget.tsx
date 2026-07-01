@@ -4,6 +4,7 @@ import { useEffect, useMemo, useRef, useState, type WheelEvent } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 import Image from 'next/image';
 import { cn } from '@/lib/utils';
+import { profile } from '@/lib/profileData';
 
 type MessageSide = 'incoming' | 'outgoing';
 
@@ -35,15 +36,15 @@ const dotVariants = {
 };
 
 const initialPrompt =
-  'want to work together? just want to chat? send me a text here (no, for real)';
+  'want to work together or just say hello? drop a note here and i will get back to you soon';
 
 const questionsByStep: Record<
   Exclude<ConversationStep, 'intro' | 'done'>,
   string
 > = {
   contact:
-    "ahhh, i see 👀 what's the best way to reach you? (email, Telegram, X, etc.)",
-  extra: 'thanks 🙏 anything else you wanna tell me?'
+    "what is the best way to reach you? email, LinkedIn, or something else",
+  extra: 'anything else that would be useful for me to know?'
 };
 
 let messageIdCounter = 1;
@@ -129,7 +130,7 @@ export default function IMessageWidget() {
 
     const timeout = setTimeout(() => {
       const summaryMessage =
-        "ok, got it 🙌 i'll hit you back as soon as i can 💬 talk soon ✨";
+        "thanks, i have it. i will follow up soon and keep the conversation going";
 
       setMessages((prev) => [
         ...prev,
@@ -140,18 +141,18 @@ export default function IMessageWidget() {
 
     // trigger an email draft with the collected data
     try {
-      const subject = 'New message from your portfolio iMessage widget';
+      const subject = 'New message from your portfolio';
       const bodyLines = [
         `What they wrote first: ${formData.topic}`,
         '',
-        `How to reach them: ${formData.contact || '—'}`,
+        `How to reach them: ${formData.contact || 'not provided'}`,
         '',
         `Extra details:`,
-        formData.extra || '—'
+        formData.extra || 'not provided'
       ];
 
       const body = bodyLines.join('\n');
-      const mailtoHref = `mailto:bettinasosarohl@gmail.com?subject=${encodeURIComponent(
+      const mailtoHref = `mailto:${profile.email}?subject=${encodeURIComponent(
         subject
       )}&body=${encodeURIComponent(body)}`;
 
@@ -159,7 +160,7 @@ export default function IMessageWidget() {
         window.location.href = mailtoHref;
       }
     } catch {
-      // fail silently – the conversation still "completes" in the UI
+      // fail silently so the conversation still completes in the UI
     }
 
     return () => clearTimeout(timeout);
@@ -239,8 +240,8 @@ export default function IMessageWidget() {
                   <div className="flex max-w-[82%] items-start gap-3">
                     <div className="mt-4 h-12 w-12 overflow-hidden rounded-full">
                       <Image
-                        src="/images/profile2.jpg"
-                        alt="Betts avatar"
+                        src="/images/profile.jpg"
+                        alt="Raahym avatar"
                         width={40}
                         height={40}
                         className="w-full rounded-full object-cover"
@@ -248,7 +249,7 @@ export default function IMessageWidget() {
                     </div>
                     <div className="space-y-1">
                       <span className=" block text-xs font-medium text-foreground/80 text-gray-300 sm:text-[13px]">
-                        Betts
+                        Raahym
                       </span>
                       <div className="rounded-2xl rounded-tl-md bg-foreground/5 px-4 py-2 text-[16px] leading-relaxed text-foreground shadow-sm sm:text-[17px]">
                         {message.text}

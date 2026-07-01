@@ -5,6 +5,7 @@ import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Link from 'next/link';
 import { useScrollDots } from '@/hooks/useScrollDots';
+import { smallerProjects } from '@/lib/profileData';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -20,34 +21,34 @@ export interface Repo {
 
 export const repos: Repo[] = [
   {
-    name: 'telegram-ai-bot',
-    description:
-      'A production-ready Telegram bot template with OpenAI integration. Perfect for building conversational AI experiences.',
-    url: 'https://github.com/bettinasosa/telegram-bot-template',
-    language: 'TypeScript',
-    tags: ['Template', 'AI', 'Bot'],
+    name: 'Digital ESP32 Clock',
+    description: smallerProjects[0].description,
+    url: smallerProjects[0].href,
+    language: 'C++',
+    tags: smallerProjects[0].tags,
     featured: true
   },
   {
-    name: 'portfolio',
-    description:
-      'This website! Built with Next.js 14, GSAP animations, and a custom design system.',
-    url: 'https://github.com/bettinasosa/portfolio',
-    language: 'TypeScript',
-    tags: ['Next.js', 'GSAP', 'Design']
+    name: 'Tetris Autoplayer',
+    description: smallerProjects[1].description,
+    url: smallerProjects[1].href,
+    language: 'Python',
+    tags: smallerProjects[1].tags
   },
   {
-    name: 'mpc-voting-contract',
-    description: 'A MPC voting contract.',
-    url: 'https://github.com/bettinasosa/voting-contract',
-    language: 'Rust',
-    tags: ['Web3', 'Smart Contracts']
+    name: 'Robot Pathfinder',
+    description: smallerProjects[3].description,
+    url: smallerProjects[3].href,
+    language: 'C',
+    tags: smallerProjects[3].tags
   }
 ];
 
 const languageColors: Record<string, string> = {
   TypeScript: 'bg-blue-500',
   JavaScript: 'bg-yellow-400',
+  'C++': 'bg-pink-500',
+  C: 'bg-sky-500',
   Solidity: 'bg-purple-500',
   Markdown: 'bg-foreground/50',
   Python: 'bg-green-500'
@@ -106,12 +107,12 @@ export default function OpenSourceShowcase() {
       <div className="mb-4 flex items-center justify-between">
         <div>
           <h2 className="text-sm font-semibold text-foreground">
-            Open Source
+            Selected work
           </h2>
-          <p className="text-xs text-foreground/50">Templates & repos</p>
+          <p className="text-xs text-foreground/50">Projects & experiments</p>
         </div>
         <Link
-          href="https://github.com/bettinasosa"
+          href="https://github.com/raahymrehan0"
           target="_blank"
           rel="noopener noreferrer"
           className="group flex items-center gap-1.5 rounded-full border border-foreground/10 px-2.5 py-1 text-[11px] text-foreground/70 transition-all hover:border-foreground/30 hover:text-foreground"

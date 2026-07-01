@@ -12,8 +12,8 @@ const icons = [
   '/images/techstack/typescript-logo.png',
 ];
 
-const size = 880; // overall wheel size (px) — much bigger
-const radius = 320; // orbit radius (px) — larger orbit to match size
+const size = 880; // overall wheel size in px
+const radius = 320; // orbit radius in px
 
 export default function TechStackOrbit() {
   const wheelRef = useRef<HTMLDivElement>(null);
@@ -119,8 +119,13 @@ export default function TechStackOrbit() {
         })}
       </div>
       {/* Center circle */}
-      <div className="absolute left-1/2 top-1/2 h-28 w-28 -translate-x-1/2 -translate-y-1/2 rounded-full bg-gray-200 shadow-lg z-10 flex items-center justify-center text-xl font-bold">
-        Tech Stack
+      <div className="absolute left-1/2 top-1/2 z-10 flex h-32 w-32 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-gradient-to-br from-sky-400 via-cyan-500 to-fuchsia-500 p-1 shadow-[0_0_40px_rgba(0,191,255,0.25)]">
+        <div className="flex h-full w-full flex-col items-center justify-center rounded-full border border-white/40 bg-black/70 text-center text-white backdrop-blur">
+          <span className="text-4xl font-semibold tracking-[0.2em]">R</span>
+          <span className="mt-1 text-[9px] font-semibold uppercase tracking-[0.35em] text-cyan-200">
+            Build
+          </span>
+        </div>
       </div>
     </div>
   );

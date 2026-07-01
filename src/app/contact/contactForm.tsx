@@ -43,7 +43,7 @@ export function ContactForm() {
             Let&apos;s talk
           </h2>
           <p className="text-primary-950/70 dark:text-primary-200/70 max-w-lg text-lg sm:text-xl">
-            I am always happy to hear about projects, internships and ideas.
+            I am always happy to hear about thoughtful projects and new opportunities.
           </p>
         </div>
         <div className="col-span-2">

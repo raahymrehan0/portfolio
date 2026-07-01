@@ -63,7 +63,7 @@ export default function MusicWidget() {
           {currentTrack.name}
         </h4>
         <p className="truncate text-sm text-foreground/60">
-          {currentTrack.artist} — {currentTrack.album}
+          {currentTrack.artist} - {currentTrack.album}
         </p>
       </div>
 
@@ -80,4 +80,3 @@ export default function MusicWidget() {
     </div>
   );
 }
-

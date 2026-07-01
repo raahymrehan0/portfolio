@@ -1,160 +1,150 @@
-'use client';
-
-import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { useSpotify } from '@/hooks/useSpotify';
-import { useGitHub } from '@/hooks/useGithub';
 import Layout from '@/components/layout';
-import AnimatedSection from '@/components/about/AnimatedSection';
-import TextReveal from '@/components/about/TextReveal';
-import JourneyTimeline from '@/components/about/JourneyTimeline';
-import SpotifyPlaylists from '@/app/about/spotifyPlaylists';
-import RoundedButton from '@/components/animations/roundedButton';
-import OpenSourceShowcase from '@/components/about/OpenSourceShowcase';
-import CompactGitHubWidget from '@/components/about/Widgets/CompactGitHubWidget';
-import IMessageWidget from '@/components/about/Widgets/IMessageWidget';
-import ContrastCursor from '@/components/animations/cursor/contrastCursor';
+import { education, experience, featuredProjects, profile } from '@/lib/profileData';
+
+export const metadata = {
+  title: 'About'
+};
 
 export default function About() {
-  const {
-    playlists,
-    isLoading: spotifyLoading,
-    error: spotifyError
-  } = useSpotify();
-
-  const { githubData, isLoading: githubLoading, error: githubError } = useGitHub();
+  const wise = experience[0];
 
   return (
-    <div className="relative overflow-hidden">
-      <Layout
-        title="About Me"
-        subtitle="A third year CS student building software with real use cases."
-      >
-        <div className="space-y-16">
-          <section className="grid gap-8 py-8 md:gap-12 lg:grid-cols-[1.1fr_0.9fr] lg:gap-16">
-            <AnimatedSection animation="fade-right" className="lg:self-start">
-              <div className="relative aspect-[4/5] w-full max-w-sm overflow-hidden rounded-3xl">
-                <Image
-                  src="/images/profile2.jpg"
-                  alt="Raahym Rehan"
-                  fill
-                  className="object-cover object-top"
-                  priority
-                  sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 400px"
-                />
-              </div>
-            </AnimatedSection>
-
-            <div className="space-y-8">
-              <AnimatedSection animation="fade-up">
-                <TextReveal
-                  text="I am Raahym Rehan. I am a third year computer science student at UCL and I build software that sits between data, product thinking and practical use."
-                  className="text-xl font-medium leading-relaxed text-foreground/90 sm:text-2xl"
-                  as="p"
-                  highlightWords={['third year', 'data', 'product']}
-                  scrub={false}
-                />
-              </AnimatedSection>
-
-              <AnimatedSection animation="fade-up" delay={0.1}>
-                <div className="space-y-4">
-                  <h3 className="text-lg font-semibold text-foreground">
-                    What I focus on
-                  </h3>
-                  <p className="leading-relaxed text-foreground/70">
-                    I like work that connects data, engineering and product thinking. My projects have involved AI systems, forecasting and full stack tools that need to be reliable.
-                  </p>
-                </div>
-              </AnimatedSection>
-
-              <AnimatedSection animation="fade-up" delay={0.2}>
-                <div className="space-y-4">
-                  <h3 className="text-lg font-semibold text-foreground">
-                    My background
-                  </h3>
-                  <p className="leading-relaxed text-foreground/70">
-                    My experience includes work with Wise, a project with Microsoft and the IFRC, and student work at UCL.
-                  </p>
-                </div>
-              </AnimatedSection>
-
-              {!githubLoading && !githubError && githubData && (
-                <AnimatedSection animation="fade-up" delay={0.3}>
-                  <div className="rounded-2xl border border-foreground/10 bg-foreground/5 p-5">
-                    <p className="text-sm font-medium uppercase tracking-[0.2em] text-foreground/60">
-                      GitHub activity
-                    </p>
-                    <p className="mt-2 text-foreground/80">
-                      {githubData.totalContributions} contributions in the last year.
-                    </p>
-                  </div>
-                </AnimatedSection>
-              )}
+    <Layout
+      title="About"
+      subtitle="I build AI and data systems with a bias toward real use."
+    >
+      <div className="mx-auto max-w-7xl space-y-20">
+        <section className="grid gap-10 lg:grid-cols-[0.85fr_1.15fr] lg:items-start">
+          <div className="relative aspect-[4/5] w-full max-w-md overflow-hidden rounded-lg bg-foreground/5">
+            <Image
+              src="/images/profile2.jpg"
+              alt="Raahym Rehan"
+              fill
+              className="object-cover object-top"
+              priority
+              sizes="(max-width: 1024px) 100vw, 420px"
+            />
+          </div>
+          <div className="space-y-8">
+            <div className="space-y-5">
+              <p className="text-sm font-semibold uppercase tracking-[0.24em] text-foreground/50">
+                {profile.location}
+              </p>
+              <h2 className="text-3xl font-semibold leading-tight text-foreground sm:text-5xl">
+                I am Raahym. I care about data products that can survive real pressure.
+              </h2>
+              <p className="text-lg leading-relaxed text-foreground/75">
+                I am a third year Computer Science student at UCL. I work across agent systems and decision support tools.
+              </p>
+              <p className="text-lg leading-relaxed text-foreground/75">
+                At Wise, I work on quantitative FX risk and market data infrastructure. Outside that, I build projects that connect messy signals to usable interfaces.
+              </p>
             </div>
-          </section>
-
-          <section className="py-4">
-            <AnimatedSection animation="fade-up">
-              <div className="mb-8 flex flex-col gap-3 md:flex-row md:items-baseline md:justify-between">
-                <h2 className="text-xl font-bold text-foreground sm:text-2xl">
-                  My path so far
-                </h2>
+            <div className="grid gap-4 sm:grid-cols-2">
+              <div className="rounded-lg border border-foreground/10 bg-white p-5 shadow-sm">
+                <p className="text-sm font-semibold uppercase tracking-[0.2em] text-foreground/50">
+                  Current work
+                </p>
+                <h3 className="mt-3 text-xl font-semibold text-foreground">
+                  {wise.company}
+                </h3>
+                <p className="mt-2 text-sm leading-relaxed text-foreground/65">
+                  {wise.summary}
+                </p>
               </div>
-
-              <div className="grid gap-4 lg:grid-cols-2">
-                <div className="min-w-0 lg:col-span-1">
-                  <div className="rounded-2xl border border-foreground/5 bg-white p-6 shadow-sm sm:p-8">
-                    <JourneyTimeline />
-                  </div>
-
-                  <section className="py-16">
-                    <AnimatedSection animation="fade-up">
-                      <div className="rounded-2xl border border-foreground/5 bg-white p-6 shadow-sm sm:p-8">
-                        <h2 className="mb-4 text-xl font-bold text-foreground sm:text-2xl">
-                          Education and focus
-                        </h2>
-                        <p className="mb-6 text-foreground/70">
-                          I am in my third year at UCL studying computer science with a minor in Robotics. I am especially interested in AI and data systems.
-                        </p>
-                        <div className="flex flex-wrap gap-3">
-                          <Link href="/projects">
-                            <RoundedButton>Selected work</RoundedButton>
-                          </Link>
-                          <Link href="/contact">
-                            <RoundedButton>Get in touch</RoundedButton>
-                          </Link>
-                        </div>
-                      </div>
-                    </AnimatedSection>
-                  </section>
-                </div>
-
-                <div className="min-w-0 lg:col-span-1">
-                  <div className="space-y-4 lg:sticky lg:top-32">
-                    <AnimatedSection animation="fade-up">
-                      <CompactGitHubWidget />
-                    </AnimatedSection>
-                    <AnimatedSection animation="fade-up">
-                      <OpenSourceShowcase />
-                    </AnimatedSection>
-                    <AnimatedSection animation="fade-up">
-                      <IMessageWidget />
-                    </AnimatedSection>
-                    {!spotifyLoading && !spotifyError && playlists.length > 0 && (
-                      <AnimatedSection animation="fade-up">
-                        <SpotifyPlaylists playlists={playlists} />
-                      </AnimatedSection>
-                    )}
-                  </div>
-                </div>
+              <div className="rounded-lg border border-foreground/10 bg-white p-5 shadow-sm">
+                <p className="text-sm font-semibold uppercase tracking-[0.2em] text-foreground/50">
+                  Best work
+                </p>
+                <h3 className="mt-3 text-xl font-semibold text-foreground">
+                  {featuredProjects[0].title}
+                </h3>
+                <p className="mt-2 text-sm leading-relaxed text-foreground/65">
+                  {featuredProjects[0].summary}
+                </p>
               </div>
-            </AnimatedSection>
-          </section>
-        </div>
-      </Layout>
+            </div>
+            <div className="flex flex-wrap gap-3">
+              <Link
+                href="/projects"
+                className="rounded-full bg-foreground px-5 py-3 text-sm font-semibold text-white"
+              >
+                Selected projects
+              </Link>
+              <Link
+                href="/experience"
+                className="rounded-full border border-foreground/15 px-5 py-3 text-sm font-semibold text-foreground"
+              >
+                Experience
+              </Link>
+            </div>
+          </div>
+        </section>
 
-      <ContrastCursor isActive={false} text="" />
-    </div>
+        <section className="grid gap-8 lg:grid-cols-[0.75fr_1.25fr]">
+          <div>
+            <p className="text-sm font-semibold uppercase tracking-[0.24em] text-foreground/50">
+              Focus
+            </p>
+            <h2 className="mt-3 text-3xl font-semibold text-foreground">
+              The kind of work I keep returning to.
+            </h2>
+          </div>
+          <div className="grid gap-3 sm:grid-cols-2">
+            {profile.focus.map((item) => (
+              <div
+                key={item}
+                className="rounded-lg border border-foreground/10 bg-white p-5 text-lg font-medium text-foreground shadow-sm"
+              >
+                {item}
+              </div>
+            ))}
+          </div>
+        </section>
+
+        <section className="grid gap-8 lg:grid-cols-[0.75fr_1.25fr]">
+          <div>
+            <p className="text-sm font-semibold uppercase tracking-[0.24em] text-foreground/50">
+              Education
+            </p>
+            <h2 className="mt-3 text-3xl font-semibold text-foreground">
+              UCL robotics and technical depth.
+            </h2>
+          </div>
+          <div className="space-y-4">
+            {education.map((item) => (
+              <article
+                key={item.school}
+                className="rounded-lg border border-foreground/10 bg-white p-6 shadow-sm"
+              >
+                <div className="flex flex-wrap items-baseline justify-between gap-3">
+                  <h3 className="text-xl font-semibold text-foreground">
+                    {item.school}
+                  </h3>
+                  <p className="text-sm font-medium text-foreground/55">
+                    {item.date}
+                  </p>
+                </div>
+                <p className="mt-2 font-medium text-foreground/75">
+                  {item.detail}
+                </p>
+                <ul className="mt-4 space-y-2">
+                  {item.highlights.map((highlight) => (
+                    <li
+                      key={highlight}
+                      className="text-sm leading-relaxed text-foreground/65"
+                    >
+                      {highlight}
+                    </li>
+                  ))}
+                </ul>
+              </article>
+            ))}
+          </div>
+        </section>
+      </div>
+    </Layout>
   );
 }

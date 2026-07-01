@@ -5,6 +5,7 @@ import { motion, useScroll, useTransform } from 'framer-motion';
 import Magnetic from '@/components/animations/magnetic';
 import RoundedButton from '@/components/animations/roundedButton';
 import Link from 'next/link';
+import { profile } from '@/lib/profileData';
 
 export default function ContactInfo() {
   const [timeNow, setTimeNow] = useState(
@@ -50,7 +51,7 @@ export default function ContactInfo() {
               />
             </div>
             <h2 className="ml-3 text-xl font-medium sm:text-[5vh]">
-              Let&apos;s build something.
+              Let&apos;s talk about opportunities.
             </h2>
           </span>
           <motion.div
@@ -66,14 +67,14 @@ export default function ContactInfo() {
           </motion.div>
         </div>
         <div className="mt-6 flex gap-5 sm:mx-[100px]">
-          <a href="mailto:raahym.rehan@gmail.com">
-            <RoundedButton>raahym.rehan@gmail.com</RoundedButton>
+          <a href={`mailto:${profile.email}`}>
+            <RoundedButton>{profile.email}</RoundedButton>
           </a>
         </div>
 
         <div className="mt-20 flex flex-col justify-between p-5 2xs:mt-52 sm:mx-[100px] sm:mt-48 sm:flex-row">
           <p className="min-w-screen mb-5 text-base sm:max-w-xs">
-            I am a UCL student building AI, data and software products with an interest in finance.
+            I build AI and data systems for practical teams. I am interested in opportunities with real problems.
           </p>
           <div className="flex items-end gap-2">
             <span className="flex flex-col gap-3">
@@ -98,7 +99,7 @@ export default function ContactInfo() {
               </h3>
               <Magnetic>
                 <Link
-                  href="https://instagram.com/raahymrehan"
+                  href={profile.instagram}
                   className={animatedUnderlineStyle}
                 >
                   Instagram
@@ -107,7 +108,7 @@ export default function ContactInfo() {
             </span>
             <Magnetic>
               <Link
-                href="https://github.com/raahymrehan0"
+                href={profile.github}
                 className={animatedUnderlineStyle}
               >
                 Github
@@ -115,7 +116,7 @@ export default function ContactInfo() {
             </Magnetic>
             <Magnetic>
               <Link
-                href="https://www.linkedin.com/in/raahymrehan/"
+                href={profile.linkedin}
                 className={animatedUnderlineStyle}
               >
                 Linkedin
