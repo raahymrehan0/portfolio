@@ -2,7 +2,6 @@ import Image from 'next/image';
 import Link from 'next/link';
 import Layout from '@/components/layout';
 import { education, experience, featuredProjects, profile } from '@/lib/profileData';
-import AboutLiveWidgets from './liveWidgets';
 
 export const metadata = {
   title: 'About'
@@ -105,8 +104,6 @@ export default function About() {
             ))}
           </div>
         </section>
-
-        <AboutLiveWidgets />
 
         <section className="grid gap-8 lg:grid-cols-[0.75fr_1.25fr]">
           <div>

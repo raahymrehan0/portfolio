@@ -6,13 +6,11 @@ import { useRef, useState } from 'react';
 import { gsap } from 'gsap';
 import Link from 'next/link';
 import { ContactForm } from '@/app/contact/contactForm';
-import { useToast } from '@/components/ui/use-toast';
 
 export default function Contact() {
   const background = useRef(null);
   const emailRef = useRef(null);
   const [emailCopied, setEmailCopied] = useState(false);
-  const { toast } = useToast();
 
   const setBackground = (isActive: any) => {
     gsap.to(background.current, { opacity: isActive ? 0.7 : 0 });
@@ -44,10 +42,6 @@ export default function Contact() {
           <TextDisperse
             setBackground={setBackground}
             onClick={() => {
-              toast({
-                description:
-                  'Email copied. You can also drop a note in the form below.'
-              });
               scrollToEmail();
             }}
           >
