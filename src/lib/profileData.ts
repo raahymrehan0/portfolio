@@ -55,9 +55,9 @@ export const experience = [
     summary:
       'Built a humanitarian intelligence platform for source grounded crisis reporting.',
     highlights: [
-      'Worked on ingestion across HDX, GDELT and ReliefWeb.',
-      'Used Copernicus data for geospatial crisis context.',
-      'Helped shape a LangGraph pipeline for IFRC aligned report generation.',
+      'Built ingestion flows across HDX, GDELT and ReliefWeb.',
+      'Added Copernicus data for geospatial crisis context.',
+      'Designed a LangGraph pipeline for IFRC aligned report generation.',
       'Integrated Django APIs and React views with Azure PostgreSQL.',
       'Connected generation flows to Azure OpenAI.'
     ],
@@ -128,7 +128,7 @@ export const featuredProjects = [
     description:
       'The platform turns crisis data into structured reports for analysts and operations teams. It uses LangGraph, Django and React. It also uses Azure PostgreSQL and Azure OpenAI. Source data comes from HDX, GDELT, ReliefWeb and Copernicus.',
     contribution:
-      'I focused on data ingestion, agent orchestration and system integration.',
+      'I built the data ingestion flow, agent orchestration and system integration.',
     tags: ['LangGraph', 'Django', 'React', 'Azure', 'PostgreSQL'],
     colour: '#7f1d1d'
   },
@@ -141,7 +141,7 @@ export const featuredProjects = [
     description:
       'AIDR combines FastAPI agents, PostgreSQL with PostGIS and WebSockets. It uses OpenAI analysis, Mapbox and mission control workflows.',
     contribution:
-      'I worked on the agent backed response flow and the dashboard model for command decisions.',
+      'I built the agent backed response flow and dashboard model for command decisions.',
     tags: ['FastAPI', 'PostGIS', 'Mapbox', 'WebSockets', 'OpenAI'],
     colour: '#0f766e'
   },
@@ -154,7 +154,7 @@ export const featuredProjects = [
     description:
       'CampNav uses LiveKit voice and camera frames. It adds multimodal LLM context, orientation data and QR detection. HackLondon work fed into the AR guidance prototype.',
     contribution:
-      'I helped connect the voice assistant, camera stream and navigation overlay into one prototype.',
+      'I connected the voice assistant, camera stream and navigation overlay into one prototype.',
     tags: ['LiveKit', 'Next.js', 'OpenAI', 'Computer vision', 'AR'],
     colour: '#4338ca'
   }
