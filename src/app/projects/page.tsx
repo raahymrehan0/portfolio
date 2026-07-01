@@ -11,7 +11,7 @@ export default function ProjectsHome() {
   return (
     <Layout
       title="Projects"
-      subtitle="Selected AI, data and systems work with the strongest projects first."
+      subtitle="Selected projects that showcase my work"
     >
       <div className="mx-auto max-w-7xl space-y-16">
         <section className="grid gap-5 md:grid-cols-2">
