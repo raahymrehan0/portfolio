@@ -201,30 +201,6 @@ export const smallerProjects = [
   }
 ];
 
-export const notes = [
-  {
-    title: 'Why ForeSight became a flagship project',
-    date: '2026',
-    summary:
-      'It connects news discovery, market data and risk scoring into one analyst workflow.',
-    tags: ['AI', 'Markets', 'Product']
-  },
-  {
-    title: 'What I learned from the IFRC project',
-    date: '2026',
-    summary:
-      'Humanitarian software needs traceable sources and careful language. The hard part is making complex data usable under pressure.',
-    tags: ['Humanitarian AI', 'Data']
-  },
-  {
-    title: 'CampNav as a prototype',
-    date: '2025',
-    summary:
-      'Voice, camera frames and orientation data can make navigation feel direct. The prototype explored that interaction loop.',
-    tags: ['Voice', 'Vision', 'AR']
-  }
-];
-
 export const education = [
   {
     school: 'University College London',

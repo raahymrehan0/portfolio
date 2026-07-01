@@ -15,11 +15,11 @@ export default function Layout({
   center
 }: PropsWithChildren<Props>) {
   return (
-    <div className="mt-36 px-8 py-16 sm:py-20">
-      <div className={clsx('pb-14', center ? 'text-center' : '')}>
+    <div className="mt-28 px-6 py-14 sm:mt-36 sm:px-8 sm:py-20">
+      <div className={clsx('max-w-7xl pb-16', center ? 'mx-auto text-center' : '')}>
         <h1
           className={clsx(
-            'text-3xl font-medium lg:text-[10rem]',
+            'max-w-full break-words text-5xl font-medium leading-[0.95] tracking-normal sm:text-7xl lg:text-[clamp(5rem,12vw,10rem)]',
             center ? 'items-center' : ''
           )}
         >
@@ -28,8 +28,8 @@ export default function Layout({
         {subtitle && (
           <p
             className={clsx(
-              'mt-4 text-lg text-foreground/70 sm:text-xl lg:mt-6 lg:text-2xl',
-              center ? 'mx-auto max-w-2xl' : ''
+              'mt-6 max-w-3xl text-base leading-relaxed text-foreground/70 sm:text-xl lg:mt-8 lg:text-2xl',
+              center ? 'mx-auto' : ''
             )}
           >
             {subtitle}

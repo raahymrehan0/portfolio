@@ -44,15 +44,17 @@ export function BlogList({ posts }: BlogListProps) {
         {posts.map((post, index) => (
           <ProjectCard
             key={post.id}
-            id={post.url}
+            id={post.slug}
             title={post.title}
             description={post.content}
             imagePath={post.heroImage || ''}
-            link={post.url}
+            link={`/blog#${post.slug}`}
             publishedAt={new Date(post.publishedAt)}
             index={index}
             animated
-            buttonText="Read Article"
+            external={false}
+            tags={post.tags}
+            buttonText="Read post"
           />
         ))}
       </div>

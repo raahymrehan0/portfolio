@@ -8,13 +8,12 @@ import Link from 'next/link';
 import { ArrowUpRight } from 'lucide-react';
 import { isMobile } from '@/components/util';
 import Magnetic from '@/components/animations/magnetic';
-import { profile } from '@/lib/profileData';
 
 const navLinks = [
   { title: 'About', href: '/about' },
   { title: 'Experience', href: '/experience' },
   { title: 'Projects', href: '/projects' },
-  { title: 'Notes', href: '/notes' }
+  { title: 'Blog', href: '/blog' }
 ];
 
 export default function Header() {
@@ -59,21 +58,14 @@ export default function Header() {
         className="absolute top-0 z-20 box-border flex w-full items-center p-4 font-light text-white mix-blend-difference lg:p-8"
       >
         {!isMobile() && (
-          <div className="flex flex-1 items-center justify-between gap-8 font-semibold">
+          <div className="flex flex-1 items-center justify-center gap-16 font-semibold">
             <div className="group relative z-10 flex cursor-pointer p-3">
-              <div className="flex gap-5">
+              <div className="flex gap-10 lg:gap-16">
                 {navLinks.map((link) => (
                   <Magnetic key={link.href}>
                     <Link href={link.href}>{link.title}</Link>
                   </Magnetic>
                 ))}
-              </div>
-            </div>
-            <div className="group relative z-10 flex cursor-pointer flex-col p-3">
-              <div className="flex flex-col">
-                <Magnetic>
-                  <Link href={profile.linkedin}>LinkedIn</Link>
-                </Magnetic>
               </div>
             </div>
             <div className="group relative z-10 flex cursor-pointer flex-col p-3">
