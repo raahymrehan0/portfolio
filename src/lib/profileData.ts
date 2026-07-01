@@ -6,9 +6,9 @@ export const profile = {
   github: 'https://github.com/raahymrehan0',
   linkedin: 'https://www.linkedin.com/in/raahymrehan/',
   instagram: 'https://instagram.com/raahymrehan',
-  headline: 'I build AI systems and data products for real decisions.',
+  headline: 'I build software, AI systems and data products for real use.',
   summary:
-    'I am a third year Computer Science student at UCL. My work spans agent systems, market intelligence and crisis analysis.',
+    'I am a third year Computer Science student at UCL. My work spans full stack software, agent systems and data engineering.',
   focus: [
     'Agentic AI systems',
     'Data engineering',

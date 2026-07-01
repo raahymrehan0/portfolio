@@ -35,9 +35,14 @@ export default function ProjectsHome() {
               </div>
               <div className="flex flex-1 flex-col justify-between gap-6 p-5 sm:p-6">
                 <div className="space-y-4">
-                  <p className="text-xs font-semibold uppercase tracking-[0.22em] text-foreground/45">
-                    {project.kicker}
-                  </p>
+                  <div className="flex flex-wrap items-center justify-center gap-3 text-center">
+                    <p className="text-xs font-semibold uppercase tracking-[0.22em] text-foreground/45">
+                      {project.kicker}
+                    </p>
+                    <span className="rounded-full border border-foreground/10 px-3 py-1 text-xs font-medium text-foreground/50">
+                      {project.status}
+                    </span>
+                  </div>
                   <div>
                     <h2 className="text-2xl font-semibold leading-tight text-foreground sm:text-3xl">
                       {project.title}
@@ -64,10 +69,7 @@ export default function ProjectsHome() {
                       </span>
                     ))}
                   </div>
-                  <div className="flex items-center justify-between gap-4 border-t border-foreground/10 pt-4">
-                    <span className="text-xs font-medium text-foreground/50">
-                      {project.status}
-                    </span>
+                  <div className="flex items-center justify-center gap-4 border-t border-foreground/10 pt-4">
                     {project.href ? (
                       <Link
                         href={project.href}

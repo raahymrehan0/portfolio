@@ -10,6 +10,7 @@ import { isMobile } from '@/components/util';
 import Magnetic from '@/components/animations/magnetic';
 
 const navLinks = [
+  { title: 'Home', href: '/' },
   { title: 'About', href: '/about' },
   { title: 'Experience', href: '/experience' },
   { title: 'Projects', href: '/projects' },
@@ -60,7 +61,7 @@ export default function Header() {
         {!isMobile() && (
           <div className="flex flex-1 items-center justify-center gap-16 font-semibold">
             <div className="group relative z-10 flex cursor-pointer p-3">
-              <div className="flex gap-10 lg:gap-16">
+              <div className="flex gap-8 lg:gap-12">
                 {navLinks.map((link) => (
                   <Magnetic key={link.href}>
                     <Link href={link.href}>{link.title}</Link>

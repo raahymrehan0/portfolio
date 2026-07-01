@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import Link from 'next/link';
 import Layout from '@/components/layout';
 import { education, experience, featuredProjects, profile } from '@/lib/profileData';
@@ -13,36 +12,26 @@ export default function About() {
   return (
     <Layout
       title="About"
-      subtitle="I build AI and data systems with a bias toward real use."
+      subtitle="I build software, AI systems and data products with a bias toward real use."
     >
       <div className="mx-auto max-w-7xl space-y-20">
-        <section className="grid gap-10 lg:grid-cols-[0.85fr_1.15fr] lg:items-start">
-          <div className="relative aspect-[4/5] w-full max-w-md overflow-hidden rounded-lg bg-foreground/5">
-            <Image
-              src="/images/profile2.jpg"
-              alt="Raahym Rehan"
-              fill
-              className="object-cover object-top"
-              priority
-              sizes="(max-width: 1024px) 100vw, 420px"
-            />
-          </div>
+        <section className="mx-auto max-w-4xl text-center">
           <div className="space-y-8">
             <div className="space-y-5">
               <p className="text-sm font-semibold uppercase tracking-[0.24em] text-foreground/50">
                 {profile.location}
               </p>
               <h2 className="text-3xl font-semibold leading-tight text-foreground sm:text-5xl">
-                I am Raahym. I care about data products that can survive real pressure.
+                I am Raahym. I like building software that feels useful after the demo ends.
               </h2>
-              <p className="text-lg leading-relaxed text-foreground/75">
-                I am a third year Computer Science student at UCL. I work across agent systems and decision support tools.
+              <p className="mx-auto max-w-3xl text-lg leading-relaxed text-foreground/75">
+                I am a third year Computer Science student at UCL. I work across full stack software, AI agents and data engineering.
               </p>
-              <p className="text-lg leading-relaxed text-foreground/75">
-                At Wise, I work on quantitative FX risk and market data infrastructure. Outside that, I build projects that connect messy signals to usable interfaces.
+              <p className="mx-auto max-w-3xl text-lg leading-relaxed text-foreground/75">
+                At Wise, I work on quantitative FX risk and market data infrastructure. Outside that, I build tools that connect backend systems to clear user interfaces.
               </p>
             </div>
-            <div className="grid gap-4 sm:grid-cols-2">
+            <div className="grid gap-4 text-left sm:grid-cols-2">
               <div className="rounded-lg border border-foreground/10 bg-white p-5 shadow-sm">
                 <p className="text-sm font-semibold uppercase tracking-[0.2em] text-foreground/50">
                   Current work
@@ -66,7 +55,7 @@ export default function About() {
                 </p>
               </div>
             </div>
-            <div className="flex flex-wrap gap-3">
+            <div className="flex flex-wrap justify-center gap-3">
               <Link
                 href="/projects"
                 className="rounded-full bg-foreground px-5 py-3 text-sm font-semibold text-white"
