@@ -29,7 +29,7 @@ export default function About() {
     <div className="relative overflow-hidden">
       <Layout
         title="About Me"
-        subtitle="A third year CS student building AI, data and fintech products."
+        subtitle="A third year CS student building software with real use cases."
       >
         <div className="space-y-16">
           <section className="grid gap-8 py-8 md:gap-12 lg:grid-cols-[1.1fr_0.9fr] lg:gap-16">
@@ -49,10 +49,10 @@ export default function About() {
             <div className="space-y-8">
               <AnimatedSection animation="fade-up">
                 <TextReveal
-                  text="I am Raahym Rehan. I am a third year computer science student at UCL and I build AI, data and software products with a strong interest in finance."
+                  text="I am Raahym Rehan. I am a third year computer science student at UCL and I build software that sits between data, product thinking and practical use."
                   className="text-xl font-medium leading-relaxed text-foreground/90 sm:text-2xl"
                   as="p"
-                  highlightWords={['third year', 'AI', 'finance']}
+                  highlightWords={['third year', 'data', 'product']}
                   scrub={false}
                 />
               </AnimatedSection>
@@ -63,7 +63,7 @@ export default function About() {
                     What I focus on
                   </h3>
                   <p className="leading-relaxed text-foreground/70">
-                    I care about work that connects AI, data and product thinking. My projects have involved humanitarian intelligence, forecasting, market data and full stack tools that need to be reliable.
+                    I like work that connects data, engineering and product thinking. My projects have involved AI systems, forecasting and full stack tools that need to be reliable.
                   </p>
                 </div>
               </AnimatedSection>
@@ -74,7 +74,7 @@ export default function About() {
                     My background
                   </h3>
                   <p className="leading-relaxed text-foreground/70">
-                    My experience includes work with Wise, Microsoft and the International Red Cross, plus student and research projects at UCL.
+                    My experience includes work with Wise, a project with Microsoft and the IFRC, and student work at UCL.
                   </p>
                 </div>
               </AnimatedSection>
@@ -115,7 +115,7 @@ export default function About() {
                           Education and focus
                         </h2>
                         <p className="mb-6 text-foreground/70">
-                          I am in my third year at UCL studying computer science with a minor in Robotics. I am especially interested in AI, data systems and finance.
+                          I am in my third year at UCL studying computer science with a minor in Robotics. I am especially interested in AI and data systems.
                         </p>
                         <div className="flex flex-wrap gap-3">
                           <Link href="/projects">

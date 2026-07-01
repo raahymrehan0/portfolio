@@ -37,7 +37,7 @@ const journeyData: TimelineItem[] = [
     title: 'Industrial project with IFRC',
     company: 'UCL',
     description:
-      'I worked with IFRC data engineers on a humanitarian intelligence project. We built tools to process crisis data and support analysis for responders.'
+      'I worked with Microsoft and IFRC teams on a humanitarian intelligence project. We built tools to process crisis data and support analysis for responders.'
   },
   {
     year: '2025',
