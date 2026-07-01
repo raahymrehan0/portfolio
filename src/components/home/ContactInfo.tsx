@@ -47,7 +47,7 @@ export default function ContactInfo() {
                 src={`/images/profile2.jpg`}
                 priority
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                style={{ objectFit: 'cover' }}
+                className="object-cover"
               />
             </div>
             <h2 className="ml-3 text-xl font-medium sm:text-[5vh]">

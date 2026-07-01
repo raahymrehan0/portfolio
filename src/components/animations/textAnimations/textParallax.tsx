@@ -38,10 +38,10 @@ const Phrase = ({ src }: { src: string }) => {
       <p className="text-[7.5vw]">Abstract thinker Software engineer</p>
       <span className="relative aspect-[4/2] h-[7.5vw] overflow-hidden rounded-full">
         <Image
-          style={{ objectFit: 'cover' }}
           src={src}
           alt="image"
           fill
+          className="object-cover"
           sizes={'6'}
         />
       </span>
