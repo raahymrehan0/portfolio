@@ -18,13 +18,6 @@ const companyLogos: Record<string, { src: string; alt: string }> = {
   }
 };
 
-const experienceMedia: Record<string, { src: string; alt: string }> = {
-  'Microsoft and IFRC': {
-    src: '/images/experience/ifrc-presentation.png',
-    alt: 'Raahym presenting the Microsoft and IFRC project'
-  }
-};
-
 export default function ExperiencePage() {
   return (
     <Layout
@@ -98,18 +91,6 @@ export default function ExperiencePage() {
                   </span>
                 ))}
               </div>
-              {experienceMedia[item.company] && (
-                <div className="overflow-hidden rounded-lg border border-foreground/10 bg-foreground/[0.03]">
-                  <Image
-                    src={experienceMedia[item.company].src}
-                    alt={experienceMedia[item.company].alt}
-                    width={988}
-                    height={1480}
-                    className="h-auto w-full"
-                    sizes="(max-width: 768px) 100vw, 620px"
-                  />
-                </div>
-              )}
             </div>
           </article>
         ))}
