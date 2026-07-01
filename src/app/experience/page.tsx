@@ -15,6 +15,10 @@ const companyLogos: Record<string, { src: string; alt: string }> = {
   Computime: {
     src: '/images/logos/computime.jpeg',
     alt: 'Computime logo'
+  },
+  'UCL Entrepreneurs': {
+    src: '/images/logos/ucl-entrepreneurs.jpeg',
+    alt: 'UCL Entrepreneurs logo'
   }
 };
 
