@@ -13,9 +13,9 @@ const inter = Inter({ subsets: ['latin'] });
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://www.raahymrehan.com';
 
 const metaDescription =
-  'Raahym Rehan · Software Engineer · Building thoughtful products and AI experiences.';
+  'Raahym Rehan. AI and data engineer building agent systems, data products, and practical software.';
 
-const ogImagePath = '/images/profile2.jpg';
+const ogImagePath = '/images/projects/ifrc-vsr.png';
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
         url: ogImagePath,
         width: 1200,
         height: 630,
-        alt: 'Raahym Rehan — Software Engineer'
+        alt: 'Raahym Rehan portfolio preview'
       }
     ]
   },

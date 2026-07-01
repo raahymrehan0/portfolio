@@ -14,16 +14,16 @@ const links = [
     href: '/about'
   },
   {
+    title: 'experience',
+    href: '/experience'
+  },
+  {
     title: 'projects',
     href: '/projects'
   },
   {
-    title: 'web gallery',
-    href: '/web'
-  },
-  {
-    title: 'blog',
-    href: '/blog'
+    title: 'notes',
+    href: '/notes'
   },
   {
     title: 'contact',
@@ -51,7 +51,7 @@ export default function Menu() {
     <div className="fixed right-[20px] top-[20px] z-20 lg:right-[30px] lg:top-[30px]">
       <motion.div
         className={cn('relative rounded-3xl bg-secondary', {
-          'lg:top-[-25px right-[-15px] top-[-15px] h-[640px] w-[350px] sm:h-[650px] sm:w-[480px] lg:right-[-25px] ':
+          'right-[-15px] top-[-15px] h-[700px] w-[350px] sm:h-[720px] sm:w-[520px] lg:right-[-25px] lg:top-[-25px]':
             isActive,
           'right-0 top-0 h-[40px] w-[100px] opacity-0': !isActive
         })}

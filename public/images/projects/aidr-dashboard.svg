@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">AIDR command dashboard preview</title>
+  <desc id="desc">Static dashboard preview for a disaster response command center.</desc>
+  <rect width="1200" height="760" fill="#08111f"/>
+  <rect x="48" y="42" width="1104" height="86" rx="18" fill="#101b2d" stroke="#27364e"/>
+  <circle cx="92" cy="85" r="21" fill="#ef4444"/>
+  <path d="M92 72 106 98H78Z" fill="#fff"/>
+  <text x="132" y="79" fill="#f8fafc" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="700">Project AIDR</text>
+  <text x="132" y="107" fill="#94a3b8" font-family="Inter, Arial, sans-serif" font-size="17">Emergency response command center</text>
+  <rect x="910" y="65" width="186" height="40" rx="20" fill="#133527" stroke="#22c55e"/>
+  <circle cx="938" cy="85" r="7" fill="#22c55e"/>
+  <text x="958" y="91" fill="#bbf7d0" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="700">Live agents</text>
+  <rect x="48" y="156" width="250" height="118" rx="16" fill="#101b2d" stroke="#27364e"/>
+  <text x="76" y="200" fill="#f8fafc" font-family="Inter, Arial, sans-serif" font-size="36" font-weight="700">12</text>
+  <text x="76" y="232" fill="#94a3b8" font-family="Inter, Arial, sans-serif" font-size="18">Active incidents</text>
+  <rect x="326" y="156" width="250" height="118" rx="16" fill="#101b2d" stroke="#27364e"/>
+  <text x="354" y="200" fill="#f8fafc" font-family="Inter, Arial, sans-serif" font-size="36" font-weight="700">7</text>
+  <text x="354" y="232" fill="#94a3b8" font-family="Inter, Arial, sans-serif" font-size="18">Available units</text>
+  <rect x="604" y="156" width="250" height="118" rx="16" fill="#101b2d" stroke="#27364e"/>
+  <text x="632" y="200" fill="#f8fafc" font-family="Inter, Arial, sans-serif" font-size="36" font-weight="700">4</text>
+  <text x="632" y="232" fill="#94a3b8" font-family="Inter, Arial, sans-serif" font-size="18">Pending missions</text>
+  <rect x="882" y="156" width="270" height="118" rx="16" fill="#101b2d" stroke="#27364e"/>
+  <text x="910" y="200" fill="#f8fafc" font-family="Inter, Arial, sans-serif" font-size="36" font-weight="700">3</text>
+  <text x="910" y="232" fill="#94a3b8" font-family="Inter, Arial, sans-serif" font-size="18">AI agent updates</text>
+  <rect x="48" y="304" width="662" height="398" rx="20" fill="#0f172a" stroke="#27364e"/>
+  <path d="M76 647 198 536 296 587 418 462 512 505 658 363" fill="none" stroke="#38bdf8" stroke-width="4"/>
+  <circle cx="198" cy="536" r="13" fill="#f97316" stroke="#fff" stroke-width="4"/>
+  <circle cx="418" cy="462" r="17" fill="#ef4444" stroke="#fff" stroke-width="4"/>
+  <circle cx="658" cy="363" r="15" fill="#22c55e" stroke="#fff" stroke-width="4"/>
+  <path d="M102 364h192v132H102z" fill="#172554" opacity=".55"/>
+  <path d="M352 398h224v176H352z" fill="#134e4a" opacity=".55"/>
+  <path d="M538 338h120v86H538z" fill="#7f1d1d" opacity=".7"/>
+  <text x="76" y="344" fill="#cbd5e1" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="700">Live damage map</text>
+  <rect x="738" y="304" width="414" height="398" rx="20" fill="#101b2d" stroke="#27364e"/>
+  <text x="770" y="348" fill="#f8fafc" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="700">Mission recommendations</text>
+  <g font-family="Inter, Arial, sans-serif">
+    <rect x="770" y="382" width="350" height="76" rx="14" fill="#172033" stroke="#334155"/>
+    <text x="794" y="412" fill="#f8fafc" font-size="17" font-weight="700">Search and rescue unit</text>
+    <text x="794" y="439" fill="#94a3b8" font-size="15">High priority near Penn Station</text>
+    <rect x="770" y="480" width="350" height="76" rx="14" fill="#172033" stroke="#334155"/>
+    <text x="794" y="510" fill="#f8fafc" font-size="17" font-weight="700">Medical team routing</text>
+    <text x="794" y="537" fill="#94a3b8" font-size="15">Allocate nearest available team</text>
+    <rect x="770" y="578" width="350" height="76" rx="14" fill="#172033" stroke="#334155"/>
+    <text x="794" y="608" fill="#f8fafc" font-size="17" font-weight="700">Damage assessment</text>
+    <text x="794" y="635" fill="#94a3b8" font-size="15">New reports need verification</text>
+  </g>
+</svg>

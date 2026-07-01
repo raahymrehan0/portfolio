@@ -5,10 +5,10 @@ import RoundedButton from '@/components/animations/roundedButton';
 import Link from 'next/link';
 
 export default function Description() {
-  const phrase1 = 'I build software that is useful and easy to work with.';
+  const phrase1 = 'I build systems that turn messy data into useful decisions.';
 
   const phrase2 =
-    'I am a third year computer science student at UCL with experience in AI, data work and practical product building.';
+    'My recent work spans FX risk, humanitarian intelligence, disaster response and campus navigation.';
   const description = useRef(null);
   const isInView = useInView(description);
 
@@ -57,19 +57,19 @@ export default function Description() {
           animate={isInView ? 'open' : 'closed'}
           className="m-0 pb-3 font-light sm:text-lg"
         >
-          I am in my third year at UCL and I enjoy building software that sits between research and real use.
+          I like projects with real constraints. They make the engineering sharper and the product choices clearer.
         </motion.p>
         <motion.p
           variants={opacity}
           animate={isInView ? 'open' : 'closed'}
           className="m-0 text-lg font-light"
         >
-          My recent work has involved AI systems, data projects and product work for student teams and industry projects.
+          The flagship work here starts with ForeSight and the IFRC Virtual Situation Room.
         </motion.p>
         <div data-scroll-speed={0.1}>
-          <Link href={'/about'}>
+          <Link href={'/projects'}>
             <RoundedButton className="absolute ml-56 mt-6 flex h-[100px] w-[100px] cursor-pointer items-center justify-center rounded-full bg-destructive text-white sm:ml-16 sm:mt-16 sm:h-[200px] sm:w-[200px]">
-              About me
+              Projects
             </RoundedButton>
           </Link>
         </div>

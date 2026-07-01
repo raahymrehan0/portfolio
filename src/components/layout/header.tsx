@@ -9,6 +9,14 @@ import { ArrowUpRight } from 'lucide-react';
 import { isMobile } from '@/components/util';
 import Magnetic from '@/components/animations/magnetic';
 import Image from 'next/image';
+import { profile } from '@/lib/profileData';
+
+const navLinks = [
+  { title: 'About', href: '/about' },
+  { title: 'Experience', href: '/experience' },
+  { title: 'Projects', href: '/projects' },
+  { title: 'Notes', href: '/notes' }
+];
 
 export default function Header() {
   const header = useRef(null);
@@ -85,24 +93,20 @@ export default function Header() {
           </Link>
         </div>
         {!isMobile() && (
-          <div className="flex flex-1 items-center justify-between font-semibold">
-            <div className="group relative z-10 flex cursor-pointer flex-col p-3">
-              <div className="flex flex-col">
-                <Magnetic>
-                  <Link href={'/about'}>About</Link>
-                </Magnetic>
-                <Magnetic>
-                  <Link href={'/projects'}>Projects</Link>
-                </Magnetic>
+          <div className="flex flex-1 items-center justify-between gap-8 font-semibold">
+            <div className="group relative z-10 flex cursor-pointer p-3">
+              <div className="flex gap-5">
+                {navLinks.map((link) => (
+                  <Magnetic key={link.href}>
+                    <Link href={link.href}>{link.title}</Link>
+                  </Magnetic>
+                ))}
               </div>
             </div>
             <div className="group relative z-10 flex cursor-pointer flex-col p-3">
               <div className="flex flex-col">
                 <Magnetic>
-                  <Link href={'/web'}>Web Gallery</Link>
-                </Magnetic>
-                <Magnetic>
-                  <Link href={'/blog'}>Blog</Link>
+                  <Link href={profile.linkedin}>LinkedIn</Link>
                 </Magnetic>
               </div>
             </div>
