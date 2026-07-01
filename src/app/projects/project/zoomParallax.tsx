@@ -1,10 +1,4 @@
-import Picture1 from '../../../../public/images/m31/packaging.png';
 import Picture2 from '../../../../public/images/astra/astra.png';
-import Picture3 from '../../../../public/images/m31/app.png';
-import Picture4 from '../../../../public/images/m31/controller.jpg';
-import Picture5 from '../../../../public/images/m31/research.png';
-import Picture6 from '../../../../public/images/m31/specs.png';
-import Picture7 from '../../../../public/images/m31/controller.png';
 import Image, { StaticImageData } from 'next/image';
 import classNames from 'classnames';
 import { motion, MotionValue, useScroll, useTransform } from 'framer-motion';
@@ -41,13 +35,13 @@ export default function ZoomParallax() {
   const scale9 = useTransform(scrollYProgress, [0, 1], [1, 9]);
 
   const pictures: Picture[] = [
-    { src: Picture1, scale: scale4 },
+    { src: Picture2, scale: scale4 },
     { src: Picture2, scale: scale5 },
-    { src: Picture3, scale: scale6 },
-    { src: Picture4, scale: scale5 },
-    { src: Picture5, scale: scale6 },
-    { src: Picture6, scale: scale8 },
-    { src: Picture7, scale: scale9 }
+    { src: Picture2, scale: scale6 },
+    { src: Picture2, scale: scale5 },
+    { src: Picture2, scale: scale6 },
+    { src: Picture2, scale: scale8 },
+    { src: Picture2, scale: scale9 }
   ];
 
   return (
@@ -72,7 +66,7 @@ export default function ZoomParallax() {
                   fill
                   alt="image"
                   placeholder="blur"
-                  objectFit="cover"
+                  className="object-cover"
                 />
               </div>
             </motion.div>

@@ -16,30 +16,17 @@ interface Photo {
 export default function PhotosWidget() {
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  // Add your digital nomad/travel photos here
-  // Replace these with your actual travel photos (suggested: add to /public/images/travel/)
   const photos: Photo[] = [
     {
-      src: '/images/gallery/walletcon.png',
-      alt: 'Travel photo 1',
-      location: 'Conference travels'
+      src: '/images/profile.jpg',
+      alt: 'Raahym headshot',
+      location: 'Current work'
     },
     {
-      src: '/images/gallery/walletconnect.png',
-      alt: 'Travel photo 2',
-      location: 'Remote work setup'
-    },
-    {
-      src: '/images/gallery/reown.png',
-      alt: 'Travel photo 3',
-      location: 'Digital nomad life'
+      src: '/images/profile2.jpg',
+      alt: 'Raahym in a different setting',
+      location: 'A lighter side of the year'
     }
-    // Add more photos here! Example:
-    // {
-    //   src: '/images/travel/paris.jpg',
-    //   alt: 'Paris workspace',
-    //   location: 'Paris, France'
-    // },
   ];
 
   const currentPhoto = photos[currentIndex];
@@ -107,9 +94,9 @@ export default function PhotosWidget() {
 
       {/* Digital nomad label */}
       <div className="p-5">
-        <p className="text-sm font-medium text-foreground">Digital Nomad</p>
+        <p className="text-sm font-medium text-foreground">A few snapshots</p>
         <p className="mt-1 text-xs text-foreground/60">
-          Living and working from different locations around the world
+          A smaller set of images that reflect my work and the people around it.
         </p>
       </div>
     </div>

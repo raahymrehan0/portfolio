@@ -26,32 +26,32 @@ export default function TwitterWidget() {
       <div className="mb-4 flex items-center gap-3">
         <div className="relative h-12 w-12 overflow-hidden rounded-full">
           <Image
-            src="/images/profile2.jpg"
-            alt="Bettina"
+            src="/images/profile.jpg"
+            alt="Raahym"
             fill
             className="object-cover"
             sizes="48px"
           />
         </div>
         <div>
-          <h3 className="font-semibold text-foreground">Bettina Sosa</h3>
-          <p className="text-sm text-foreground/60">@bettysrohl</p>
+          <h3 className="font-semibold text-foreground">Raahym Rehan</h3>
+          <p className="text-sm text-foreground/60">@raahymrehan</p>
         </div>
       </div>
 
       {/* Status text */}
       <p className="mb-4 text-sm leading-relaxed text-foreground/80">
-        Building in public • Freelance engineer & DevRel • Digital nomad
+        Building practical systems at UCL and beyond.
       </p>
 
       {/* View tweets link */}
       <Link
-        href="https://twitter.com/bettysrohl"
+        href="https://www.linkedin.com/in/raahymrehan"
         target="_blank"
         rel="noopener noreferrer"
         className="inline-flex items-center gap-1.5 text-sm font-medium text-primary transition-colors hover:text-primary/80"
       >
-        Read my tweets
+        Find me on LinkedIn
         <span className="transition-transform group-hover:translate-x-1">→</span>
       </Link>
     </div>

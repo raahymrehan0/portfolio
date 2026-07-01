@@ -22,7 +22,7 @@ const journeyData: TimelineItem[] = [
     title: 'Third year CS student and builder',
     company: 'UCL',
     description:
-      'I am entering my third year at UCL and building software with a focus on AI, data and useful products. My work has connected research, product delivery and practical engineering.',
+      'I am entering my third year at UCL and building software with a focus on AI, data and practical systems. My work has connected research, engineering and hands-on implementation.',
     highlight: true
   },
   {
