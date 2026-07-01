@@ -23,9 +23,9 @@ export default function PhotosWidget() {
       location: 'Current work'
     },
     {
-      src: '/images/profile2.jpg',
-      alt: 'Raahym in a different setting',
-      location: 'A lighter side of the year'
+      src: '/images/profile.jpg',
+      alt: 'Raahym profile photo',
+      location: 'Profile'
     }
   ];
 
@@ -102,4 +102,3 @@ export default function PhotosWidget() {
     </div>
   );
 }
-

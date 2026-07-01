@@ -32,7 +32,7 @@ const slider1 = [
 const slider2 = [
   {
     color: '#e0f2fe',
-    src: 'profile2.jpg'
+    src: 'profile.jpg'
   },
   {
     color: '#f8fafc',
