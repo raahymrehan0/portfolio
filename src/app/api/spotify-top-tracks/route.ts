@@ -1,6 +1,8 @@
 import { NextResponse } from 'next/server';
 import SpotifyWebApi from 'spotify-web-api-node';
 
+export const dynamic = 'force-dynamic';
+
 const spotifyApi = new SpotifyWebApi({
   clientId: process.env.SPOTIFY_CLIENT_ID,
   clientSecret: process.env.SPOTIFY_CLIENT_SECRET,
@@ -10,6 +12,10 @@ const spotifyApi = new SpotifyWebApi({
 
 export async function GET() {
   try {
+    if (!process.env.SPOTIFY_REFRESH_TOKEN) {
+      return NextResponse.json({ topArtists: [], topTracks: [] });
+    }
+
     const data = await spotifyApi.refreshAccessToken();
     spotifyApi.setAccessToken(data.body['access_token']);
 

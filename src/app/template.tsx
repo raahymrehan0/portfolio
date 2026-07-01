@@ -25,18 +25,19 @@ export default function RootTemplate({ children }: PropsWithChildren) {
   const pathname = usePathname().split('/').pop();
 
   let bgColour = 'bg-background';
-  const darkModeScreens = ['contact', 'm31', 'astra'];
+  const darkModeScreens = ['contact', 'astra'];
   if (darkModeScreens.includes(pathname!)) {
     bgColour = 'bg-foreground';
   }
 
   useEffect(() => {
-    setTimeout(() => {
+    const timeout = window.setTimeout(() => {
       setIsLoading(false);
       document.body.style.cursor = 'default';
       window.scrollTo(0, 0);
     }, 800);
-    console.log('loading', isLoading);
+
+    return () => window.clearTimeout(timeout);
   }, []);
 
   return (

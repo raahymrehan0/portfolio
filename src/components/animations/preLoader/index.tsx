@@ -18,20 +18,22 @@ export default function PreLoader() {
   const [index, setIndex] = useState(0);
   const [dimension, setDimension] = useState({ width: 0, height: 0 });
   const pathname = usePathname().split('/').pop();
-  console.log('pathname', pathname);
+  const label = pathname || words[index].text;
 
   useEffect(() => {
     setDimension({ width: window.innerWidth, height: window.innerHeight });
   }, []);
 
   useEffect(() => {
-    if (index == words.length - 1) return;
-    setTimeout(
+    if (index === words.length - 1) return;
+    const timeout = window.setTimeout(
       () => {
-        setIndex(index + 1);
+        setIndex((current) => current + 1);
       },
-      index == 0 ? 1000 : 150
+      index === 0 ? 1000 : 150
     );
+
+    return () => window.clearTimeout(timeout);
   }, [index]);
 
   const initialPath = `M0 0 L${dimension.width} 0 L${dimension.width} ${
@@ -77,8 +79,7 @@ export default function PreLoader() {
                 `bg-${words[index].colour}`
               )}
             ></span>
-            hii
-            {pathname === '' ? words[index].text : pathname}
+            {label}
           </motion.p>
           <svg className="absolute top-0 h-[calc(100%+300px)] w-full fill-[#141516]">
             <motion.path
