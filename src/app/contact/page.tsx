@@ -46,7 +46,7 @@ export default function Contact() {
             onClick={() => {
               toast({
                 description:
-                  'Email copied to clipboard, alternatively write your enquiry on the form!'
+                  'Email copied. You can also drop a note in the form below.'
               });
               scrollToEmail();
             }}
@@ -55,12 +55,12 @@ export default function Contact() {
           </TextDisperse>
           <Link href={'https://www.linkedin.com/in/raahymrehan/'}>
             <TextDisperse setBackground={setBackground}>
-              <p>→Linkedin</p>
+              <p>→LinkedIn</p>
             </TextDisperse>
           </Link>
           <Link href={'https://github.com/raahymrehan0'}>
             <TextDisperse setBackground={setBackground}>
-              <p>→Github</p>
+              <p>→GitHub</p>
             </TextDisperse>
           </Link>
         </div>

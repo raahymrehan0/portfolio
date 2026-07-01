@@ -29,7 +29,7 @@ export default function About() {
     <div className="relative overflow-hidden">
       <Layout
         title="About Me"
-        subtitle="Software engineer, builder, and design-minded problem solver."
+        subtitle="A student builder with a focus on useful software and thoughtful product work."
       >
         <div className="space-y-16">
           <section className="grid gap-8 py-8 md:gap-12 lg:grid-cols-[1.1fr_0.9fr] lg:gap-16">
@@ -49,10 +49,10 @@ export default function About() {
             <div className="space-y-8">
               <AnimatedSection animation="fade-up">
                 <TextReveal
-                  text="I’m Raahym — a software engineer who likes building polished products at the intersection of code, design, and product thinking."
+                  text="I am Raahym Rehan. I study computer science at UCL and I spend much of my time building practical software."
                   className="text-xl font-medium leading-relaxed text-foreground/90 sm:text-2xl"
                   as="p"
-                  highlightWords={['design', 'product']}
+                  highlightWords={['computer science', 'software']}
                   scrub={false}
                 />
               </AnimatedSection>
@@ -60,12 +60,10 @@ export default function About() {
               <AnimatedSection animation="fade-up" delay={0.1}>
                 <div className="space-y-4">
                   <h3 className="text-lg font-semibold text-foreground">
-                    What I do
+                    What I focus on
                   </h3>
                   <p className="leading-relaxed text-foreground/70">
-                    I enjoy turning ambitious ideas into useful digital products,
-                    from front-end experiences to full-stack systems and AI-powered
-                    tools.
+                    I like work that sits between research, product thinking and implementation. My projects have involved AI systems, data pipelines and web products that need to be usable from day one.
                   </p>
                 </div>
               </AnimatedSection>
@@ -73,12 +71,10 @@ export default function About() {
               <AnimatedSection animation="fade-up" delay={0.2}>
                 <div className="space-y-4">
                   <h3 className="text-lg font-semibold text-foreground">
-                    Where I’ve been
+                    My background
                   </h3>
                   <p className="leading-relaxed text-foreground/70">
-                    My work has spanned startups, product teams, and experimental
-                    builds that combine engineering rigour with thoughtful user
-                    experience.
+                    I have worked on projects with Wise, Microsoft and the International Red Cross, and I have also built tools for student teams and research focused work at UCL.
                   </p>
                 </div>
               </AnimatedSection>
@@ -90,8 +86,7 @@ export default function About() {
                       GitHub activity
                     </p>
                     <p className="mt-2 text-foreground/80">
-                      {githubData.totalContributions} contributions in the last
-                      year.
+                      {githubData.totalContributions} contributions in the last year.
                     </p>
                   </div>
                 </AnimatedSection>
@@ -103,7 +98,7 @@ export default function About() {
             <AnimatedSection animation="fade-up">
               <div className="mb-8 flex flex-col gap-3 md:flex-row md:items-baseline md:justify-between">
                 <h2 className="text-xl font-bold text-foreground sm:text-2xl">
-                  Where I&apos;ve been
+                  My path so far
                 </h2>
               </div>
 
@@ -117,19 +112,17 @@ export default function About() {
                     <AnimatedSection animation="fade-up">
                       <div className="rounded-2xl border border-foreground/5 bg-white p-6 shadow-sm sm:p-8">
                         <h2 className="mb-4 text-xl font-bold text-foreground sm:text-2xl">
-                          Education & recognition
+                          Education and focus
                         </h2>
                         <p className="mb-6 text-foreground/70">
-                          I have built products across creative, technical, and
-                          startup environments, with a focus on clarity, craft,
-                          and strong execution.
+                          I am studying computer science at UCL with a strong interest in software engineering, AI and practical systems.
                         </p>
                         <div className="flex flex-wrap gap-3">
-                          <Link href="/projects/m31">
+                          <Link href="/projects">
                             <RoundedButton>Selected work</RoundedButton>
                           </Link>
-                          <Link href="/projects/axo">
-                            <RoundedButton>More projects</RoundedButton>
+                          <Link href="/contact">
+                            <RoundedButton>Get in touch</RoundedButton>
                           </Link>
                         </div>
                       </div>

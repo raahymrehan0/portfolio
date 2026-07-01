@@ -40,11 +40,10 @@ export function ContactForm() {
       <div className="flex flex-col gap-12 lg:grid lg:grid-cols-3 lg:gap-8">
         <div className="flex flex-col gap-4 sm:gap-6">
           <h2 className="text-3xl font-medium tracking-tight sm:text-4xl">
-            Let&apos;s talk!
+            Let&apos;s talk
           </h2>
           <p className="text-primary-950/70 dark:text-primary-200/70 max-w-lg text-lg sm:text-xl">
-            I&apos;m always looking for new and innovative ways to use my
-            skills.
+            I am always happy to hear about projects, internships and ideas.
           </p>
         </div>
         <div className="col-span-2">
@@ -61,7 +60,7 @@ export function ContactForm() {
                     <FormLabel className="text-xl">Subject</FormLabel>
                     <FormControl>
                       <Input
-                        placeholder="Full name"
+                        placeholder="What is this about"
                         className="w-full rounded-xl bg-background text-foreground"
                         {...field}
                       />
@@ -80,7 +79,7 @@ export function ContactForm() {
                       <Input
                         className="w-full rounded-xl bg-background text-foreground"
                         type="email"
-                        placeholder="Email"
+                        placeholder="Your email"
                         {...field}
                       />
                     </FormControl>
@@ -97,7 +96,7 @@ export function ContactForm() {
                     <FormControl>
                       <Textarea
                         className="w-full rounded-xl bg-background text-foreground"
-                        placeholder="Message"
+                        placeholder="Tell me a bit more"
                         {...field}
                       />
                     </FormControl>

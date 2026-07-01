@@ -5,11 +5,10 @@ import RoundedButton from '@/components/animations/roundedButton';
 import Link from 'next/link';
 
 export default function Description() {
-  const phrase1 =
-    'A software engineer with a passion for AI, Robotics and everything in between.\n\n ';
+  const phrase1 = 'I build software that feels useful and clear.';
 
   const phrase2 =
-    'Particularly interested in applied machine learning, agentic systems, and impactful technology at scale. I build systems that combine analytical rigor with practical engineering to solve real problems.';
+    'I am a computer science student at UCL and I spend my time making products that sit between code, design and data.';
   const description = useRef(null);
   const isInView = useInView(description);
 
@@ -58,15 +57,14 @@ export default function Description() {
           animate={isInView ? 'open' : 'closed'}
           className="m-0 pb-3 font-light sm:text-lg"
         >
-          Currently a computer science student at UCL and a full-stack developer
-  building AI-driven and impactful software products.
+          I am currently studying at UCL and building software that sits at the edge of research and product work.
         </motion.p>
         <motion.p
           variants={opacity}
           animate={isInView ? 'open' : 'closed'}
           className="m-0 text-lg font-light"
         >
-          I have contributed to innovative projects in industry, ranging from multi-agent humanitarian systems with Microsoft and IFRC, to Machine Learning driven IoT solutions. I am always seeking new opportunities to apply my skills and make a meaningful difference through technology.
+          My recent work has included AI systems for humanitarian analysis, energy forecasting for smart homes and full stack product work for student teams.
         </motion.p>
         <div data-scroll-speed={0.1}>
           <Link href={'/about'}>
