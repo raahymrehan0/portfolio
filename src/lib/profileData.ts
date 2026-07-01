@@ -53,7 +53,7 @@ export const experience = [
     location: 'London',
     date: 'Sep 2025 to Apr 2026',
     summary:
-      'Built parts of a humanitarian intelligence platform for source grounded crisis reporting.',
+      'Built a humanitarian intelligence platform for source grounded crisis reporting.',
     highlights: [
       'Worked on ingestion across HDX, GDELT and ReliefWeb.',
       'Used Copernicus data for geospatial crisis context.',
