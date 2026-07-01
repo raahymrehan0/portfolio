@@ -18,6 +18,19 @@ const companyLogos: Record<string, { src: string; alt: string }> = {
   }
 };
 
+const partnerLogos: Record<string, { src: string; alt: string }[]> = {
+  'Microsoft and IFRC': [
+    {
+      src: '/images/logos/microsoft.webp',
+      alt: 'Microsoft logo'
+    },
+    {
+      src: '/images/logos/ifrc.webp',
+      alt: 'IFRC logo'
+    }
+  ]
+};
+
 export default function ExperiencePage() {
   return (
     <Layout
@@ -41,6 +54,25 @@ export default function ExperiencePage() {
                     className="h-full w-full object-contain"
                     sizes="96px"
                   />
+                </div>
+              )}
+              {partnerLogos[item.company] && (
+                <div className="mb-5 flex flex-wrap items-center gap-3">
+                  {partnerLogos[item.company].map((logo) => (
+                    <div
+                      key={logo.src}
+                      className="flex h-14 w-24 items-center justify-center overflow-hidden rounded-md border border-foreground/10 bg-white p-2"
+                    >
+                      <Image
+                        src={logo.src}
+                        alt={logo.alt}
+                        width={160}
+                        height={80}
+                        className="h-full w-full object-contain"
+                        sizes="96px"
+                      />
+                    </div>
+                  ))}
                 </div>
               )}
               <p className="text-sm font-semibold uppercase tracking-[0.22em] text-foreground/50">
