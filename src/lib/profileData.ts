@@ -149,7 +149,6 @@ export const featuredProjects = [
     title: 'CampNav',
     kicker: 'Voice and vision navigation',
     image: '/images/projects/campnav-screenshot.jpeg',
-    label: 'Hackathon project',
     summary:
       'A campus navigation assistant that listens and overlays direction cues.',
     description:
