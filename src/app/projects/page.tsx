@@ -11,113 +11,115 @@ export default function ProjectsHome() {
   return (
     <Layout
       title="Projects"
-      subtitle="Flagship case studies first. Smaller public repos sit below them."
+      subtitle="Selected AI, data and systems work. The main projects are private case studies unless a public report is linked."
     >
-      <div className="mx-auto max-w-7xl space-y-20">
-        <section className="grid gap-8">
+      <div className="mx-auto max-w-7xl space-y-16">
+        <section className="grid gap-5 md:grid-cols-2">
           {featuredProjects.map((project, index) => (
             <article
               key={project.title}
-              className="grid overflow-hidden rounded-lg border border-foreground/10 bg-white shadow-sm lg:grid-cols-[1fr_1.08fr]"
+              className="group flex min-h-[520px] flex-col overflow-hidden rounded-lg border border-foreground/10 bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-md"
             >
               <div
-                className="relative min-h-[280px] bg-foreground/5"
+                className="relative h-44 bg-foreground/5 sm:h-52"
                 style={{ backgroundColor: project.colour }}
               >
                 <Image
                   src={project.image}
                   alt={`${project.title} preview`}
                   fill
-                  className="object-contain p-6"
+                  className="object-contain p-5 transition duration-500 group-hover:scale-[1.03]"
                   priority={index === 0}
-                  sizes="(max-width: 1024px) 100vw, 45vw"
+                  sizes="(max-width: 768px) 100vw, 50vw"
                 />
               </div>
-              <div className="flex flex-col justify-between gap-8 p-6 sm:p-8">
-                <div className="space-y-5">
-                  <div className="flex flex-wrap items-center gap-3">
-                    <span className="text-sm font-semibold uppercase tracking-[0.24em] text-foreground/50">
-                      {project.kicker}
-                    </span>
-                    <span className="rounded-full border border-foreground/10 px-3 py-1 text-xs font-medium text-foreground/60">
-                      {project.status}
-                    </span>
-                  </div>
+              <div className="flex flex-1 flex-col justify-between gap-6 p-5 sm:p-6">
+                <div className="space-y-4">
+                  <p className="text-xs font-semibold uppercase tracking-[0.22em] text-foreground/45">
+                    {project.kicker}
+                  </p>
                   <div>
-                    <h2 className="text-3xl font-semibold text-foreground sm:text-5xl">
+                    <h2 className="text-2xl font-semibold leading-tight text-foreground sm:text-3xl">
                       {project.title}
                     </h2>
-                    <p className="mt-4 text-lg leading-relaxed text-foreground/75">
+                    <p className="mt-3 text-sm leading-relaxed text-foreground/70 sm:text-base">
                       {project.summary}
                     </p>
                   </div>
-                  <p className="leading-relaxed text-foreground/70">
+                  <p className="text-sm leading-relaxed text-foreground/65">
                     {project.description}
                   </p>
-                  <p className="leading-relaxed text-foreground/70">
+                  <p className="text-sm leading-relaxed text-foreground/65">
                     {project.contribution}
                   </p>
                 </div>
-                <div className="space-y-5">
-                  <div className="flex flex-wrap gap-2">
+                <div className="space-y-4">
+                  <div className="flex flex-wrap gap-1.5">
                     {project.tags.map((tag) => (
                       <span
                         key={tag}
-                        className="rounded-full border border-foreground/10 bg-foreground/[0.03] px-3 py-1 text-xs font-medium text-foreground/65"
+                        className="rounded-full border border-foreground/10 bg-foreground/[0.03] px-2.5 py-1 text-[11px] font-medium text-foreground/65"
                       >
                         {tag}
                       </span>
                     ))}
                   </div>
-                  {project.href ? (
-                    <Link
-                      href={project.href}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="inline-flex text-sm font-semibold text-foreground underline underline-offset-4"
-                    >
-                      Read public report
-                    </Link>
-                  ) : (
-                    <p className="text-sm font-medium text-foreground/55">
-                      Private source. Public case study only.
-                    </p>
-                  )}
+                  <div className="flex items-center justify-between gap-4 border-t border-foreground/10 pt-4">
+                    <span className="text-xs font-medium text-foreground/50">
+                      {project.status}
+                    </span>
+                    {project.href ? (
+                      <Link
+                        href={project.href}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="text-sm font-semibold text-foreground underline underline-offset-4"
+                      >
+                        Public report
+                      </Link>
+                    ) : (
+                      <span className="text-sm font-medium text-foreground/55">
+                        Case study
+                      </span>
+                    )}
+                  </div>
                 </div>
               </div>
             </article>
           ))}
         </section>
 
-        <section>
-          <div className="mb-6">
-            <p className="text-sm font-semibold uppercase tracking-[0.24em] text-foreground/50">
-              More projects
-            </p>
-            <h2 className="mt-3 text-2xl font-semibold text-foreground sm:text-4xl">
-              Smaller public repos and experiments.
-            </h2>
+        <section className="border-t border-foreground/10 pt-10">
+          <div className="mb-6 flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
+            <div>
+              <p className="text-sm font-semibold uppercase tracking-[0.24em] text-foreground/50">
+                More projects
+              </p>
+              <h2 className="mt-2 text-2xl font-semibold text-foreground sm:text-3xl">
+                Smaller public repos and experiments.
+              </h2>
+            </div>
           </div>
-          <div className="grid gap-4 md:grid-cols-2">
+          <div className="grid gap-3 md:grid-cols-2 xl:grid-cols-3">
             {smallerProjects.map((project) => (
               <Link
                 key={project.title}
                 href={project.href}
                 target="_blank"
                 rel="noreferrer"
-                className="group rounded-lg border border-foreground/10 bg-white p-5 shadow-sm transition hover:-translate-y-1 hover:shadow-md"
+                className="group rounded-lg border border-foreground/10 bg-white p-4 shadow-sm transition hover:-translate-y-0.5 hover:shadow-md"
               >
-                <h3 className="text-xl font-semibold text-foreground">
+                <h3 className="text-lg font-semibold leading-tight text-foreground">
                   {project.title}
                 </h3>
-                <p className="mt-3 text-sm leading-relaxed text-foreground/65">
+                <p className="mt-2 text-sm leading-relaxed text-foreground/65">
                   {project.description}
                 </p>
-                <div className="mt-4 flex flex-wrap gap-2">
+                <div className="mt-4 flex flex-wrap gap-1.5">
                   {project.tags.map((tag) => (
                     <span
                       key={tag}
-                      className="rounded-full bg-foreground/[0.04] px-3 py-1 text-xs font-medium text-foreground/60"
+                      className="rounded-full bg-foreground/[0.04] px-2.5 py-1 text-[11px] font-medium text-foreground/60"
                     >
                       {tag}
                     </span>
