@@ -1,9 +1,28 @@
+import Image from 'next/image';
 import Link from 'next/link';
 import Layout from '@/components/layout';
 import { experience } from '@/lib/profileData';
 
 export const metadata = {
   title: 'Experience'
+};
+
+const companyLogos: Record<string, { src: string; alt: string }> = {
+  Wise: {
+    src: '/images/logos/wise.jpeg',
+    alt: 'Wise logo'
+  },
+  Computime: {
+    src: '/images/logos/computime.jpeg',
+    alt: 'Computime logo'
+  }
+};
+
+const experienceMedia: Record<string, { src: string; alt: string }> = {
+  'Microsoft and IFRC': {
+    src: '/images/experience/ifrc-presentation.png',
+    alt: 'Raahym presenting the Microsoft and IFRC project'
+  }
 };
 
 export default function ExperiencePage() {
@@ -19,6 +38,18 @@ export default function ExperiencePage() {
             className="grid gap-6 rounded-lg border border-foreground/10 bg-white p-6 shadow-sm md:grid-cols-[0.85fr_1.15fr]"
           >
             <div>
+              {companyLogos[item.company] && (
+                <div className="mb-5 flex h-14 w-24 items-center justify-center overflow-hidden rounded-md border border-foreground/10 bg-white p-2">
+                  <Image
+                    src={companyLogos[item.company].src}
+                    alt={companyLogos[item.company].alt}
+                    width={160}
+                    height={80}
+                    className="h-full w-full object-contain"
+                    sizes="96px"
+                  />
+                </div>
+              )}
               <p className="text-sm font-semibold uppercase tracking-[0.22em] text-foreground/50">
                 {item.date}
               </p>
@@ -67,6 +98,18 @@ export default function ExperiencePage() {
                   </span>
                 ))}
               </div>
+              {experienceMedia[item.company] && (
+                <div className="overflow-hidden rounded-lg border border-foreground/10 bg-foreground/[0.03]">
+                  <Image
+                    src={experienceMedia[item.company].src}
+                    alt={experienceMedia[item.company].alt}
+                    width={988}
+                    height={1480}
+                    className="h-auto w-full"
+                    sizes="(max-width: 768px) 100vw, 620px"
+                  />
+                </div>
+              )}
             </div>
           </article>
         ))}

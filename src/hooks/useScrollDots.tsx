@@ -16,6 +16,7 @@ export const useScrollDots = (
 ) => {
   const [activeDot, setActiveDot] = useState(0);
   const [showDots, setShowDots] = useState(false);
+  const dependencyKey = dependencies.map(String).join('|');
 
   useEffect(() => {
     const container = containerRef.current;
@@ -65,7 +66,7 @@ export const useScrollDots = (
       window.removeEventListener('resize', updateDots);
       if (rafId) window.cancelAnimationFrame(rafId);
     };
-  }, [axis, dotCount, ...dependencies]);
+  }, [axis, containerRef, dependencyKey, dotCount]);
 
   return { activeDot, showDots, dotCount };
 };

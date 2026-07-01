@@ -24,6 +24,9 @@ export const metadata: Metadata = {
     template: "%s | Raahym's portfolio"
   },
   description: metaDescription,
+  icons: {
+    icon: '/favicon.svg'
+  },
   openGraph: {
     type: 'website',
     locale: 'en_US',

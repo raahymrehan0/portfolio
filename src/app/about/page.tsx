@@ -1,6 +1,8 @@
+import Image from 'next/image';
 import Link from 'next/link';
 import Layout from '@/components/layout';
 import { education, experience, featuredProjects, profile } from '@/lib/profileData';
+import AboutLiveWidgets from './liveWidgets';
 
 export const metadata = {
   title: 'About'
@@ -69,6 +71,17 @@ export default function About() {
                 Experience
               </Link>
             </div>
+            <div className="mx-auto max-w-3xl overflow-hidden rounded-lg border border-foreground/10 bg-white shadow-sm">
+              <Image
+                src="/images/about/main-station-raahym.png"
+                alt="Raahym in front of Main Street Station at night"
+                width={1024}
+                height={1536}
+                priority
+                className="h-auto w-full"
+                sizes="(max-width: 768px) 100vw, 768px"
+              />
+            </div>
           </div>
         </section>
 
@@ -92,6 +105,8 @@ export default function About() {
             ))}
           </div>
         </section>
+
+        <AboutLiveWidgets />
 
         <section className="grid gap-8 lg:grid-cols-[0.75fr_1.25fr]">
           <div>

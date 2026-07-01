@@ -40,7 +40,8 @@ const SpotifyPlaylists: React.FC<SpotifyPlaylistsProps> = ({ playlists }) => {
 
   useEffect(() => {
     const cards = cardsRef.current;
-    if (!cards.length) return;
+    const triggerElement = containerRef.current;
+    if (!cards.length || !triggerElement) return;
 
     gsap.fromTo(
       cards,
@@ -53,7 +54,7 @@ const SpotifyPlaylists: React.FC<SpotifyPlaylistsProps> = ({ playlists }) => {
         ease: 'power3.out',
         stagger: 0.15,
         scrollTrigger: {
-          trigger: containerRef.current,
+          trigger: triggerElement,
           start: 'top 80%',
           toggleActions: 'play none none reverse'
         }
@@ -62,7 +63,7 @@ const SpotifyPlaylists: React.FC<SpotifyPlaylistsProps> = ({ playlists }) => {
 
     return () => {
       ScrollTrigger.getAll().forEach((trigger) => {
-        if (trigger.vars.trigger === containerRef.current) {
+        if (trigger.vars.trigger === triggerElement) {
           trigger.kill();
         }
       });

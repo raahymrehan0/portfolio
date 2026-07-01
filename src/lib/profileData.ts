@@ -101,7 +101,6 @@ export const featuredProjects = [
     title: 'ForeSight',
     kicker: 'AI market intelligence',
     image: '/images/projects/foresight-logo.png',
-    status: 'Private repo',
     summary:
       'A geopolitical market intelligence platform for lithium and semiconductor supply chains.',
     description:
@@ -122,7 +121,7 @@ export const featuredProjects = [
     title: 'IFRC Virtual Situation Room',
     kicker: 'Humanitarian intelligence',
     image: '/images/projects/ifrc-vsr.png',
-    status: 'Public report',
+    label: 'Public report',
     href: 'https://students.cs.ucl.ac.uk/2025/group21/',
     summary:
       'A crisis intelligence dashboard built with Microsoft and IFRC through UCL IXN.',
@@ -137,7 +136,6 @@ export const featuredProjects = [
     title: 'AIDR',
     kicker: 'Disaster response agents',
     image: '/images/projects/aidr-dashboard.svg',
-    status: 'Private repo',
     summary:
       'A multi-agent disaster response command dashboard for the first hours after a crisis.',
     description:
@@ -151,7 +149,7 @@ export const featuredProjects = [
     title: 'CampNav',
     kicker: 'Voice and vision navigation',
     image: '/images/projects/campnav-screenshot.jpeg',
-    status: 'Private repo',
+    label: 'Hackathon project',
     summary:
       'A campus navigation assistant that listens and overlays direction cues.',
     description:

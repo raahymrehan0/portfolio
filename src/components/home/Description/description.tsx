@@ -8,7 +8,7 @@ export default function Description() {
   const phrase1 = 'I build systems that turn messy data into useful decisions.';
 
   const phrase2 =
-    'My recent work spans FX risk, humanitarian intelligence, disaster response and campus navigation.';
+    'My recent work spans FX risk, humanitarian intelligence, disaster response and more.';
   const description = useRef(null);
   const isInView = useInView(description);
 

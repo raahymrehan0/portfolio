@@ -11,7 +11,7 @@ export default function ProjectsHome() {
   return (
     <Layout
       title="Projects"
-      subtitle="Selected AI, data and systems work. The main projects are private case studies unless a public report is linked."
+      subtitle="Selected AI, data and systems work with the strongest projects first."
     >
       <div className="mx-auto max-w-7xl space-y-16">
         <section className="grid gap-5 md:grid-cols-2">
@@ -39,9 +39,11 @@ export default function ProjectsHome() {
                     <p className="text-xs font-semibold uppercase tracking-[0.22em] text-foreground/45">
                       {project.kicker}
                     </p>
-                    <span className="rounded-full border border-foreground/10 px-3 py-1 text-xs font-medium text-foreground/50">
-                      {project.status}
-                    </span>
+                    {project.label && (
+                      <span className="rounded-full border border-foreground/10 px-3 py-1 text-xs font-medium text-foreground/50">
+                        {project.label}
+                      </span>
+                    )}
                   </div>
                   <div>
                     <h2 className="text-2xl font-semibold leading-tight text-foreground sm:text-3xl">
@@ -69,7 +71,7 @@ export default function ProjectsHome() {
                       </span>
                     ))}
                   </div>
-                  <div className="flex items-center justify-center gap-4 border-t border-foreground/10 pt-4">
+                  <div className="flex min-h-10 items-center justify-center gap-4 border-t border-foreground/10 pt-4">
                     {project.href ? (
                       <Link
                         href={project.href}
@@ -79,11 +81,11 @@ export default function ProjectsHome() {
                       >
                         Public report
                       </Link>
-                    ) : (
+                    ) : project.label ? (
                       <span className="text-sm font-medium text-foreground/55">
-                        Case study
+                        {project.label}
                       </span>
-                    )}
+                    ) : null}
                   </div>
                 </div>
               </div>

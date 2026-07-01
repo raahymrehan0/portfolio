@@ -152,9 +152,11 @@ export default function Home() {
                   <p className="text-xs font-semibold uppercase tracking-[0.2em] text-foreground/50">
                     {project.kicker}
                   </p>
-                  <span className="rounded-full border border-foreground/10 px-2 py-1 text-[11px] text-foreground/60">
-                    {project.status}
-                  </span>
+                  {project.label && (
+                    <span className="rounded-full border border-foreground/10 px-2 py-1 text-[11px] text-foreground/60">
+                      {project.label}
+                    </span>
+                  )}
                 </div>
                 <h3 className="text-xl font-semibold text-foreground">
                   {project.title}

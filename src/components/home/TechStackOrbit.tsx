@@ -1,4 +1,5 @@
 import React, { useRef, useEffect, useState } from 'react';
+import Image from 'next/image';
 
 const icons = [
   '/images/techstack/aws-logo.png',
@@ -102,16 +103,16 @@ export default function TechStackOrbit() {
           const x = Math.cos(angle) * radius;
           const y = Math.sin(angle) * radius;
           return (
-            <img
+            <Image
               key={i}
               src={src}
               alt="tech icon"
+              width={i === 4 ? 160 : 128}
+              height={i === 4 ? 160 : 128}
               className="absolute object-contain shadow-md transition-transform duration-700 ease-out hover:scale-110"
               style={{
                 left: `calc(50% + ${x}px)`,
                 top: `calc(50% + ${y}px)`,
-                width: i === 4 ? '160px' : '128px',
-                height: i === 4 ? '160px' : '128px',
                 transform: `translate(-50%, -50%) rotate(${ -displayRotation }deg)`
               }}
             />
