@@ -22,22 +22,22 @@ const journeyData: TimelineItem[] = [
     title: 'Third year CS student and builder',
     company: 'UCL',
     description:
-      'I am entering my third year at UCL and building AI, data and software products with an interest in finance and market data. My work has connected research, product delivery and practical engineering.',
+      'I am entering my third year at UCL and building software with a focus on AI, data and useful products. My work has connected research, product delivery and practical engineering.',
     highlight: true
   },
   {
     year: '2026',
-    title: 'Software Engineering Intern',
+    title: 'Software Engineering Intern (FX Risk)',
     company: 'Wise',
     description:
-      'I worked on FX risk and market data infrastructure in Java and Python. My work supported real time monitoring, pricing workflows and quantitative analysis for currency exposure across the business.'
+      'I worked on FX risk and market data infrastructure in Java and Python. The work involved real time monitoring and backend systems for pricing and risk analysis.'
   },
   {
     year: '2025',
-    title: 'AI and Data Engineer',
-    company: 'Microsoft and IFRC',
+    title: 'Industrial project with IFRC',
+    company: 'UCL',
     description:
-      'I built a full stack humanitarian intelligence platform with Django, React and LangGraph. The work combined live crisis data, AI analysis and structured reporting for responders.'
+      'I worked with IFRC data engineers on a humanitarian intelligence project. We built tools to process crisis data and support analysis for responders.'
   },
   {
     year: '2025',
