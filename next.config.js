@@ -17,7 +17,7 @@ const nextConfig = {
     unoptimized: false
   },
   async redirects() {
-    return [
+    const projectRedirects = [
       '/projects/astra',
       '/projects/axo',
       '/projects/m31',
@@ -30,6 +30,15 @@ const nextConfig = {
       destination: '/projects',
       permanent: false
     }));
+
+    return [
+      {
+        source: '/notes',
+        destination: '/blog',
+        permanent: false
+      },
+      ...projectRedirects
+    ];
   }
 };
 
