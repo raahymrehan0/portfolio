@@ -64,7 +64,7 @@ export default function Description() {
           animate={isInView ? 'open' : 'closed'}
           className="m-0 text-lg font-light"
         >
-          The flagship work here starts with ForeSight and the IFRC Virtual Situation Room.
+          The flagship work here starts with the IFRC Virtual Situation Room.
         </motion.p>
         <div data-scroll-speed={0.1}>
           <Link href={'/projects'}>
