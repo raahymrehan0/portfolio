@@ -8,7 +8,6 @@ import Link from 'next/link';
 import { ArrowUpRight } from 'lucide-react';
 import { isMobile } from '@/components/util';
 import Magnetic from '@/components/animations/magnetic';
-import Image from 'next/image';
 import { profile } from '@/lib/profileData';
 
 const navLinks = [
@@ -59,39 +58,6 @@ export default function Header() {
         ref={header}
         className="absolute top-0 z-20 box-border flex w-full items-center p-4 font-light text-white mix-blend-difference lg:p-8"
       >
-        <div className="flex lg:pr-56">
-          <Link href={'/'} className="group z-10 flex items-center space-x-2">
-            <Magnetic>
-              <Image
-                height={32}
-                width={32}
-                src="/images/logo.jpg"
-                alt="Raahym's logo"
-                priority
-              />
-            </Magnetic>
-            {!isMobile() && (
-              <>
-                <div className="hover:rotate-[360deg]">©</div>
-                <div className="relative flex overflow-hidden">
-                  <div className="ease-custom-cubic transition-transform duration-500 group-hover:translate-x-[-100%]">
-                    coded by
-                  </div>
-                  <div className="ease-custom-cubic px-1 transition-transform duration-500 group-hover:translate-x-[-65px]">
-                    Raahym
-                  </div>
-
-                    <div
-                      className="ease-custom-cubic
-                translate-x-full transition-transform duration-500 group-hover:translate-x-[-65px]"
-                    >
-                      Rehan
-                    </div>
-                </div>
-              </>
-            )}
-          </Link>
-        </div>
         {!isMobile() && (
           <div className="flex flex-1 items-center justify-between gap-8 font-semibold">
             <div className="group relative z-10 flex cursor-pointer p-3">
