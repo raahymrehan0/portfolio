@@ -73,7 +73,7 @@ export default function ContactInfo() {
 
         <div className="mt-20 flex flex-col justify-between p-5 2xs:mt-52 sm:mx-[100px] sm:mt-48 sm:flex-row">
           <p className="min-w-screen mb-5 text-base sm:max-w-xs">
-            I am a student builder based in London. I like practical software and thoughtful products.
+            I am a UCL student building AI, data and software products with an interest in finance.
           </p>
           <div className="flex items-end gap-2">
             <span className="flex flex-col gap-3">
