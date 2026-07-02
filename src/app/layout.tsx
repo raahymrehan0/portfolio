@@ -4,7 +4,7 @@ import React, { ReactNode } from 'react';
 import { Metadata } from 'next';
 import Animations from './animations';
 import Header from '@/components/layout/header';
-import { Analytics } from '@vercel/analytics/react';
+import { Analytics } from '@vercel/analytics/next';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 
 const inter = Inter({ subsets: ['latin'] });
